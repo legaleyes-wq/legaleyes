@@ -110,7 +110,7 @@ export default function LegalEyesPage() {
               Why <span className="text-emerald">LegalEyes</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto text-balance">
-              <span className="text-gold font-semibold">100+ years</span> of cumulative experience across real lawyers.
+              SaaS, vendor, employment and data‑protection contracts, reviewed by lawyers who do this every day.
             </p>
           </div>
 
