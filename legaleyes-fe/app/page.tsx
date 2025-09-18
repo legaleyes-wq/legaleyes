@@ -23,26 +23,28 @@ export default function LegalEyesPage() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="bg-background/80 backdrop-blur border-b border-border sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative">
           <div className="text-xl font-semibold text-emerald">LegalEyes</div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
-            <a href="#how" className="text-muted-foreground hover:text-foreground transition-colors">How it works</a>
-            <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
-            <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">Testimonials</a>
-            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+            <a href="#about" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">About</a>
+            <a href="#how" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">How it works</a>
+            <a href="#pricing" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Pricing</a>
+            <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
+            <a href="#contact" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Contact</a>
           </nav>
+          {/* subtle blinking dot */}
+          <div aria-hidden className="pointer-events-none absolute top-1/2 -translate-y-1/2 right-4 size-1.5 rounded-full bg-emerald/60 animate-ping" />
         </div>
       </header>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-slate-50 to-emerald-50/30" id="about">
         <div className="absolute inset-0 bg-[url('/subtle-legal-document-pattern-background.jpg')] opacity-5"></div>
         <div className="absolute top-20 left-10 w-32 h-32 bg-emerald/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-gold/20 rounded-full blur-2xl animate-pulse delay-1000 z-0"></div>
         <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-emerald rounded-full animate-ping"></div>
         <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-gold rounded-full animate-ping delay-500"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32 z-10">
           <div className="text-center">
             <div className="mb-8">
               <div className="inline-flex items-center gap-2 bg-gradient-emerald text-white px-6 py-3 rounded-full text-sm font-medium mb-6 animate-fade-in shadow-lg animate-pulse-glow">
@@ -61,19 +63,14 @@ export default function LegalEyesPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up delay-300">
-              <Button
-                size="lg"
-                className="text-lg px-10 py-7 bg-gradient-emerald hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform text-white font-semibold animate-shimmer"
-              >
-                <Upload className="mr-2 h-5 w-5" />
-                Upload Contract Now
+              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform text-white font-semibold animate-shimmer">
+                <a href="#contact">
+                  <Upload className="mr-2 h-5 w-5" />
+                  Upload Contract Now
+                </a>
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-semibold"
-              >
-                See Pricing
+              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-semibold">
+                <a href="#pricing">See Pricing</a>
               </Button>
             </div>
 
@@ -105,7 +102,11 @@ export default function LegalEyesPage() {
       </section>
 
       {/* Why LegalEyes Section */}
-      <section className="py-24 bg-gradient-to-b from-slate-50/50 to-background">
+      <section className="py-24 bg-gradient-to-b from-slate-50/50 to-background relative">
+        {/* subtle decorative dots/boxes */}
+        <div aria-hidden className="pointer-events-none absolute -top-6 left-6 size-2 rounded-full bg-emerald/50 animate-ping"></div>
+        <div aria-hidden className="pointer-events-none absolute top-10 right-8 h-4 w-4 rotate-12 border border-emerald/20"></div>
+        <div aria-hidden className="pointer-events-none absolute bottom-10 left-10 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -165,6 +166,10 @@ export default function LegalEyesPage() {
       {/* How It Works Section */}
       <section className="py-24 relative bg-gradient-to-r from-slate-50/30 via-white to-slate-50/30" id="how">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* subtle decorative dots/boxes */}
+          <div aria-hidden className="pointer-events-none absolute -left-3 top-8 size-2 rounded-full bg-emerald/50 animate-ping"></div>
+          <div aria-hidden className="pointer-events-none absolute -right-4 bottom-8 h-5 w-5 -rotate-6 border border-emerald/20"></div>
+          <div aria-hidden className="pointer-events-none absolute right-16 top-6 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               How It <span className="text-emerald">Works</span>
@@ -221,7 +226,10 @@ export default function LegalEyesPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-gradient-to-b from-slate-50/50 to-background" id="pricing">
+      <section className="py-24 bg-gradient-to-b from-slate-50/50 to-background relative" id="pricing">
+        <div aria-hidden className="pointer-events-none absolute top-6 left-8 size-2 rounded-full bg-emerald/50 animate-ping"></div>
+        <div aria-hidden className="pointer-events-none absolute bottom-6 right-8 h-4 w-4 rotate-6 border border-emerald/20"></div>
+        <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/4 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -258,8 +266,8 @@ export default function LegalEyesPage() {
                     <span className="text-lg">48-hour turnaround</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-deep-blue hover:bg-deep-blue/90 hover:scale-105 shadow-xl hover:shadow-blue-500/25 transition-all duration-300 text-lg py-6 font-semibold">
-                  Get Started
+                <Button asChild className="w-full bg-deep-blue hover:bg-deep-blue/90 hover:scale-105 shadow-xl hover:shadow-blue-500/25 transition-all duration-300 text-lg py-6 font-semibold">
+                  <a href="#contact">Get Started</a>
                 </Button>
               </CardContent>
             </Card>
@@ -294,8 +302,8 @@ export default function LegalEyesPage() {
                     <span className="text-lg">Face-to-face consultations</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-gradient-emerald hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold animate-shimmer">
-                  Contact Sales
+                <Button asChild className="w-full bg-gradient-emerald hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold animate-shimmer">
+                  <a href="#contact">Contact Sales</a>
                 </Button>
               </CardContent>
             </Card>
@@ -313,6 +321,9 @@ export default function LegalEyesPage() {
       <section className="py-24 relative" id="testimonials">
         <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div aria-hidden className="pointer-events-none absolute -top-3 left-1/2 size-2 rounded-full bg-emerald/30"></div>
+          <div aria-hidden className="pointer-events-none absolute -top-3 left-1/3 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
+          <div aria-hidden className="pointer-events-none absolute -bottom-4 right-10 h-5 w-5 rotate-12 border border-emerald/20"></div>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-emerald mb-6 font-[family-name:var(--font-merriweather)]">
               What Our Clients Say
@@ -445,12 +456,15 @@ export default function LegalEyesPage() {
             guesswork.
           </p>
           <Button
+            asChild
             size="lg"
             variant="secondary"
             className="text-xl px-12 py-8 bg-white text-emerald hover:bg-gold/10 hover:text-emerald shadow-2xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-110 font-bold animate-pulse-glow"
           >
-            Get Your First Review
-            <ArrowRight className="ml-2 h-6 w-6" />
+            <a href="#contact">
+              Get Your First Review
+              <ArrowRight className="ml-2 h-6 w-6" />
+            </a>
           </Button>
         </div>
       </section>
@@ -516,13 +530,13 @@ export default function LegalEyesPage() {
               <p className="text-muted-foreground text-sm">Contracts, made clear.</p>
             </div>
             <nav className="flex items-center gap-6 text-sm">
-              <a href="#about" className="text-muted-foreground hover:text-emerald transition-colors">About</a>
-              <a href="#how" className="text-muted-foreground hover:text-emerald transition-colors">How it works</a>
-              <a href="#pricing" className="text-muted-foreground hover:text-emerald transition-colors">Pricing</a>
-              <a href="#faq" className="text-muted-foreground hover:text-emerald transition-colors">FAQ</a>
-              <a href="#contact" className="text-muted-foreground hover:text-emerald transition-colors">Contact</a>
+              <a href="#about" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">About</a>
+              <a href="#how" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">How it works</a>
+              <a href="#pricing" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Pricing</a>
+              <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
+              <a href="#contact" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Contact</a>
             </nav>
-            <div className="text-sm text-muted-foreground">© 2024 LegalEyes</div>
+            <div className="text-sm text-muted-foreground">© 2025 LegalEyes</div>
           </div>
         </div>
       </footer>
