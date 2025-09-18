@@ -194,6 +194,26 @@
   animation: shimmer 2s infinite;
 }
 
+/* Slower, subtler ping for decorative dots */
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
 .delay-200 {
   animation-delay: 0.2s;
 }
