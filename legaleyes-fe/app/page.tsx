@@ -37,7 +37,7 @@ export default function LegalEyesPage() {
         </div>
       </header>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-slate-50 to-emerald-50/30" id="about">
+      <section className="relative overflow-hidden bg-background" id="about">
         <div className="absolute inset-0 bg-[url('/subtle-legal-document-pattern-background.jpg')] opacity-5"></div>
         <div className="absolute top-20 left-10 w-32 h-32 bg-emerald/10 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-48 h-48 bg-gold/20 rounded-full blur-2xl animate-pulse delay-1000 z-0"></div>
@@ -102,7 +102,7 @@ export default function LegalEyesPage() {
       </section>
 
       {/* Why LegalEyes Section */}
-      <section className="py-24 bg-gradient-to-b from-slate-50/50 to-background relative">
+      <section className="py-24 bg-background relative">
         {/* subtle decorative dots/boxes */}
         <div aria-hidden className="pointer-events-none absolute -top-6 left-6 size-2 rounded-full bg-emerald/50 animate-ping"></div>
         <div aria-hidden className="pointer-events-none absolute top-10 right-8 h-4 w-4 rotate-12 border border-emerald/20"></div>
@@ -164,7 +164,7 @@ export default function LegalEyesPage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-24 relative bg-gradient-to-r from-slate-50/30 via-white to-slate-50/30" id="how">
+      <section className="py-24 relative bg-background" id="how">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* subtle decorative dots/boxes */}
           <div aria-hidden className="pointer-events-none absolute -left-3 top-8 size-2 rounded-full bg-emerald/50 animate-ping"></div>
@@ -226,7 +226,7 @@ export default function LegalEyesPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-gradient-to-b from-slate-50/50 to-background relative" id="pricing">
+      <section className="py-24 bg-background relative" id="pricing">
         <div aria-hidden className="pointer-events-none absolute top-6 left-8 size-2 rounded-full bg-emerald/50 animate-ping"></div>
         <div aria-hidden className="pointer-events-none absolute bottom-6 right-8 h-4 w-4 rotate-6 border border-emerald/20"></div>
         <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/4 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
@@ -318,7 +318,7 @@ export default function LegalEyesPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 relative" id="testimonials">
+      <section className="py-24 relative bg-background" id="testimonials">
         <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div aria-hidden className="pointer-events-none absolute -top-3 left-1/2 size-2 rounded-full bg-emerald/30"></div>
@@ -339,7 +339,7 @@ export default function LegalEyesPage() {
                   ))}
                 </div>
                 <blockquote className="text-lg mb-6 text-balance italic">
-                  "All our contracts are vetted by LegalEyes. It's like insurance, but smarter."
+                  "All our contracts are vetted by LegalEyes. The comfort of dealing with a human for Legal work is priceless. It's like insurance, but smarter."
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
@@ -358,7 +358,7 @@ export default function LegalEyesPage() {
                   ))}
                 </div>
                 <blockquote className="text-lg mb-6 text-balance italic">
-                  "This is like having your own in-house legal team on callminus the cost."
+                  "This is like having your own in-house legal team on call, minus the cost."
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
@@ -378,7 +378,7 @@ export default function LegalEyesPage() {
                 </div>
                 <blockquote className="text-lg mb-6 text-balance italic">
                   "As a tech startup, our priorities lie elsewhere. Outsourcing all legal to LegalEyes has saved us
-                  countless hours and exorbitant fees. Must recommend for early-stage founders."
+                  countless hours and exorbitant fees. Highly recommended for early-stage founders."
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
@@ -393,7 +393,7 @@ export default function LegalEyesPage() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-gradient-to-b from-background to-slate-50/50">
+      <section id="faq" className="py-24 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">Frequently Asked Questions</h2>
@@ -441,7 +441,7 @@ export default function LegalEyesPage() {
       </section>
 
       {/* Closing CTA Section */}
-      <section className="py-24 bg-gradient-to-b from-background to-slate-50/50 relative overflow-hidden">
+      <section className="py-24 bg-background relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance text-slate">
             Contracts you understand.
@@ -463,7 +463,7 @@ export default function LegalEyesPage() {
       </section>
 
       {/* Prominent Contact Section */}
-      <section id="contact" className="py-24 bg-gradient-to-b from-slate-50 to-background">
+      <section id="contact" className="py-24 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 font-[family-name:var(--font-merriweather)] text-emerald">Get in touch</h2>
@@ -515,7 +515,7 @@ export default function LegalEyesPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-b from-card to-card/50 py-12">
+      <footer className="bg-card py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
