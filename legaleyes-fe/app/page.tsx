@@ -33,6 +33,9 @@ export default function LegalEyesPage() {
             <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
             <a href="#contact" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Contact</a>
           </nav>
+          <div className="hidden md:block">
+            <a href="#contact" className="inline-flex items-center rounded-md bg-emerald px-4 py-2 text-white text-sm font-medium hover:bg-emerald/90 transition-colors">Start Review</a>
+          </div>
           {/* subtle blinking dot */}
           <div aria-hidden className="pointer-events-none absolute top-1/2 -translate-y-1/2 right-4 size-1.5 rounded-full bg-emerald/60 animate-ping" />
         </div>
@@ -60,8 +63,7 @@ export default function LegalEyesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up delay-300">
               <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform text-white font-semibold animate-shimmer">
                 <a href="#contact">
-                  <Upload className="mr-2 h-5 w-5" />
-                  Upload Contract Now
+                  Get your first review
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-semibold">
@@ -115,8 +117,8 @@ export default function LegalEyesPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/30 hover:to-white">
               <CardContent className="pt-6">
-                <div className="bg-gradient-to-br from-emerald to-emerald-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <Users className="h-10 w-10 text-white" />
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-emerald/30 bg-white">
+                  <Users className="h-8 w-8 text-emerald" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
                   Human Expertise
@@ -129,8 +131,8 @@ export default function LegalEyesPage() {
 
             <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-yellow-50/30 hover:to-white">
               <CardContent className="pt-6">
-                <div className="bg-gradient-to-br from-gold to-yellow-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <MessageSquare className="h-10 w-10 text-white" />
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-gold/30 bg-white">
+                  <MessageSquare className="h-8 w-8 text-gold" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
                   Plain Language
@@ -143,8 +145,8 @@ export default function LegalEyesPage() {
 
             <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-blue-50/30 hover:to-white">
               <CardContent className="pt-6">
-                <div className="bg-gradient-to-br from-deep-blue to-blue-800 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <Eye className="h-10 w-10 text-white" />
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-deep-blue/30 bg-white">
+                  <Eye className="h-8 w-8 text-deep-blue" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
                   Direct Counsel
@@ -216,6 +218,77 @@ export default function LegalEyesPage() {
                 and optional consultation call.
               </p>
             </div>
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-10">NDA-first workflow. Bank-grade encryption. Least-privilege access.</p>
+        </div>
+      </BackgroundSignature>
+
+      {/* Testimonials Section (moved before pricing for trust) */}
+      <BackgroundSignature className="py-24 bg-background" id="testimonials">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-emerald mb-6 font-[family-name:var(--font-merriweather)]">
+              What Our Clients Say
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
+              <CardContent className="pt-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-lg mb-6 text-balance italic">
+                  "All our contracts are vetted by LegalEyes. The comfort of dealing with a human for Legal work is priceless. It's like insurance, but smarter."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
+                    <Award className="h-5 w-5 text-emerald" />
+                  </div>
+                  <div className="text-sm text-muted-foreground">Startup Founder</div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
+              <CardContent className="pt-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-lg mb-6 text-balance italic">
+                  "This is like having your own in-house legal team on call, minus the cost."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
+                    <Award className="h-5 w-5 text-emerald" />
+                  </div>
+                  <div className="text-sm text-muted-foreground">Business Owner</div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
+              <CardContent className="pt-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-lg mb-6 text-balance italic">
+                  "As a tech startup, our priorities lie elsewhere. Outsourcing all legal to LegalEyes has saved us countless hours and exorbitant fees. Highly recommended for early-stage founders."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
+                    <Award className="h-5 w-5 text-emerald" />
+                  </div>
+                  <div className="text-sm text-muted-foreground">Tech Startup CEO</div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </BackgroundSignature>
