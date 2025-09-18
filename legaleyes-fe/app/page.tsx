@@ -358,7 +358,7 @@ export default function LegalEyesPage() {
                   ))}
                 </div>
                 <blockquote className="text-lg mb-6 text-balance italic">
-                  "This is like having your own in-house legal team on call — minus the cost."
+                  "This is like having your own in-house legal team on callminus the cost."
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
@@ -441,28 +441,21 @@ export default function LegalEyesPage() {
       </section>
 
       {/* Closing CTA Section */}
-      <section className="py-24 bg-gradient-emerald text-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-32 -translate-y-32 animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full translate-x-48 translate-y-48 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-white/20 rounded-full animate-ping"></div>
-
+      <section className="py-24 bg-gradient-to-b from-background to-slate-50/50 relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance">
-            Don't trust templates. <br />
-            Trust <span className="text-gold">people</span>.
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance text-slate">
+            Contracts you understand.
           </h2>
-          <p className="text-2xl mb-8 opacity-90 max-w-2xl mx-auto text-balance">
-            Your contracts deserve <span className="text-gold font-semibold">human expertise</span>, not algorithmic
-            guesswork.
+          <p className="text-xl mb-8 text-slate-600 max-w-2xl mx-auto text-balance">
+            Contracts vetted by humans you can speak to.
           </p>
           <Button
             asChild
             size="lg"
-            variant="secondary"
-            className="text-xl px-12 py-8 bg-white text-emerald hover:bg-gold/10 hover:text-emerald shadow-2xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-110 font-bold animate-pulse-glow"
+            className="text-xl px-10 py-6 bg-emerald text-white hover:bg-emerald/90 shadow-xl hover:shadow-emerald/20 transition-colors font-semibold"
           >
             <a href="#contact">
-              Get Your First Review
+              Get your first review
               <ArrowRight className="ml-2 h-6 w-6" />
             </a>
           </Button>
