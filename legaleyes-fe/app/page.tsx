@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import BackgroundSignature from "@/components/background-signature"
 import {
   Shield,
   Users,
@@ -37,14 +38,8 @@ export default function LegalEyesPage() {
         </div>
       </header>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background" id="about">
-        <div className="absolute inset-0 bg-[url('/subtle-legal-document-pattern-background.jpg')] opacity-5"></div>
-        <div className="absolute top-20 left-10 w-32 h-32 bg-emerald/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-gold/20 rounded-full blur-2xl animate-pulse delay-1000 z-0"></div>
-        <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-emerald rounded-full animate-ping"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-gold rounded-full animate-ping delay-500"></div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32 z-10">
+      <BackgroundSignature className="bg-background" id="about">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
           <div className="text-center">
             <div className="mb-8">
               <div className="inline-flex items-center gap-2 bg-gradient-emerald text-white px-6 py-3 rounded-full text-sm font-medium mb-6 animate-fade-in shadow-lg animate-pulse-glow">
@@ -99,10 +94,10 @@ export default function LegalEyesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </BackgroundSignature>
 
       {/* Why LegalEyes Section */}
-      <section className="py-24 bg-background relative">
+      <BackgroundSignature className="py-24 bg-background">
         {/* subtle decorative dots/boxes */}
         <div aria-hidden className="pointer-events-none absolute -top-6 left-6 size-2 rounded-full bg-emerald/50 animate-ping"></div>
         <div aria-hidden className="pointer-events-none absolute top-10 right-8 h-4 w-4 rotate-12 border border-emerald/20"></div>
@@ -161,10 +156,10 @@ export default function LegalEyesPage() {
             </Card>
           </div>
         </div>
-      </section>
+      </BackgroundSignature>
 
       {/* How It Works Section */}
-      <section className="py-24 relative bg-background" id="how">
+      <BackgroundSignature className="py-24 bg-background" id="how">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* subtle decorative dots/boxes */}
           <div aria-hidden className="pointer-events-none absolute -left-3 top-8 size-2 rounded-full bg-emerald/50 animate-ping"></div>
@@ -223,10 +218,10 @@ export default function LegalEyesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </BackgroundSignature>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-background relative" id="pricing">
+      <BackgroundSignature className="py-24 bg-background" id="pricing">
         <div aria-hidden className="pointer-events-none absolute top-6 left-8 size-2 rounded-full bg-emerald/50 animate-ping"></div>
         <div aria-hidden className="pointer-events-none absolute bottom-6 right-8 h-4 w-4 rotate-6 border border-emerald/20"></div>
         <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/4 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
@@ -315,10 +310,10 @@ export default function LegalEyesPage() {
             </p>
           </div>
         </div>
-      </section>
+      </BackgroundSignature>
 
       {/* Testimonials Section */}
-      <section className="py-24 relative bg-background" id="testimonials">
+      <BackgroundSignature className="py-24 bg-background" id="testimonials">
         <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div aria-hidden className="pointer-events-none absolute -top-3 left-1/2 size-2 rounded-full bg-emerald/30"></div>
@@ -390,10 +385,10 @@ export default function LegalEyesPage() {
             </Card>
           </div>
         </div>
-      </section>
+      </BackgroundSignature>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-background">
+      <BackgroundSignature id="faq" className="py-24 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">Frequently Asked Questions</h2>
@@ -438,10 +433,10 @@ export default function LegalEyesPage() {
             </AccordionItem>
           </Accordion>
         </div>
-      </section>
+      </BackgroundSignature>
 
       {/* Closing CTA Section */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      <BackgroundSignature className="py-24 bg-background">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance text-slate">
             Contracts you understand.
@@ -460,10 +455,10 @@ export default function LegalEyesPage() {
             </a>
           </Button>
         </div>
-      </section>
+      </BackgroundSignature>
 
       {/* Prominent Contact Section */}
-      <section id="contact" className="py-24 bg-background">
+      <BackgroundSignature id="contact" className="py-24 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 font-[family-name:var(--font-merriweather)] text-emerald">Get in touch</h2>
@@ -512,7 +507,7 @@ export default function LegalEyesPage() {
             </div>
           </form>
         </div>
-      </section>
+      </BackgroundSignature>
 
       {/* Footer */}
       <footer className="bg-card py-12">
