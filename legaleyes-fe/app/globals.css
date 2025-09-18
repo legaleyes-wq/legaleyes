@@ -1,0 +1,291 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Refined LegalHand color palette - professional with urgency */
+  --background: #f9fafb; /* Cool white background */
+  --foreground: #374151; /* Slate gray for text */
+  --card: #ffffff; /* Pure white for cards */
+  --card-foreground: #374151; /* Slate gray for card text */
+  --popover: #ffffff; /* White popover */
+  --popover-foreground: #374151; /* Slate gray popover text */
+  --primary: #046a38; /* Deep emerald green - trust & authority */
+  --primary-foreground: #ffffff; /* White text on primary */
+  --secondary: #e5e7eb; /* Light gray secondary */
+  --secondary-foreground: #374151; /* Slate gray on secondary */
+  --muted: #f3f4f6; /* Light gray background */
+  --muted-foreground: #6b7280; /* Medium gray text */
+  --accent: #d4af37; /* Gold accent for premium feel */
+  --accent-foreground: #374151; /* Slate gray on accent */
+  --destructive: #dc2626; /* Error red */
+  --destructive-foreground: #ffffff; /* White on destructive */
+  --border: #e5e7eb; /* Light gray border */
+  --input: #ffffff; /* White input background */
+  --ring: #046a38; /* Emerald focus ring */
+  --chart-1: #046a38; /* Emerald */
+  --chart-2: #d4af37; /* Gold */
+  --chart-3: #1e3a8a; /* Deep blue */
+  --chart-4: #059669; /* Success green */
+  --chart-5: #dc2626; /* Error red */
+  --radius: 0.625rem;
+  --sidebar: #f9fafb;
+  --sidebar-foreground: #374151;
+  --sidebar-primary: #046a38;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e5e7eb;
+  --sidebar-accent-foreground: #374151;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #046a38;
+
+  /* Added LegalHand specific color tokens */
+  --emerald: #046a38; /* Deep emerald green - main brand */
+  --gold: #d4af37; /* Gold accent for premium elements */
+  --deep-blue: #1e3a8a; /* Optional alternate to gold */
+  --success: #059669; /* Success green */
+  --slate: #374151; /* Slate gray for text */
+  --cool-white: #f9fafb; /* Cool white for backgrounds */
+}
+
+.dark {
+  --background: #1f2937;
+  --foreground: #f9fafb;
+  --card: #374151;
+  --card-foreground: #f9fafb;
+  --popover: #374151;
+  --popover-foreground: #f9fafb;
+  --primary: #10b981;
+  --primary-foreground: #ffffff;
+  --secondary: #4b5563;
+  --secondary-foreground: #f9fafb;
+  --muted: #4b5563;
+  --muted-foreground: #9ca3af;
+  --accent: #f59e0b;
+  --accent-foreground: #1f2937;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #4b5563;
+  --input: #4b5563;
+  --ring: #10b981;
+  --emerald: #10b981;
+  --gold: #f59e0b;
+  --deep-blue: #3b82f6;
+  --success: #10b981;
+  --slate: #f9fafb;
+  --cool-white: #1f2937;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Added custom color utilities */
+  --color-urgent: var(--urgent);
+  --color-premium: var(--premium);
+  --color-trust: var(--trust);
+  --color-success: var(--success);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+      transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced animations with more dynamic effects */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+/* Enhanced hover effects with more dramatic transforms */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1);
+}
+
+/* Custom utility classes for the new color palette */
+.text-emerald {
+  color: #046a38;
+}
+
+.bg-emerald {
+  background-color: #046a38;
+}
+
+.text-gold {
+  color: #d4af37;
+}
+
+.bg-gold {
+  background-color: #d4af37;
+}
+
+.text-deep-blue {
+  color: #1e3a8a;
+}
+
+.bg-deep-blue {
+  background-color: #1e3a8a;
+}
+
+.text-slate {
+  color: #374151;
+}
+
+.bg-slate {
+  background-color: #374151;
+}
+
+.border-emerald {
+  border-color: #046a38;
+}
+
+.border-gold {
+  border-color: #d4af37;
+}
+
+.border-deep-blue {
+  border-color: #1e3a8a;
+}
+
+/* Gradient utilities for premium effects */
+.bg-gradient-emerald {
+  background: linear-gradient(135deg, #046a38, #059669);
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(135deg, #d4af37, #f59e0b);
+}
+
+.bg-gradient-premium {
+  background: linear-gradient(135deg, #046a38, #d4af37);
+}
+
+/* Added hover effects for emerald theme */
+.hover\:bg-emerald-dark:hover {
+  background-color: #034a28;
+}
+
+.hover\:text-emerald:hover {
+  color: #046a38;
+}
+
+.hover\:border-emerald:hover {
+  border-color: #046a38;
+}

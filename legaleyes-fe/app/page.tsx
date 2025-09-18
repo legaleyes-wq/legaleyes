@@ -1,0 +1,531 @@
+"use client"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import {
+  Shield,
+  Users,
+  CheckCircle,
+  Upload,
+  Eye,
+  MessageSquare,
+  Star,
+  ArrowRight,
+  Award,
+  Clock,
+  AlertTriangle,
+  Zap,
+} from "lucide-react"
+
+export default function LegalEyesPage() {
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="bg-background/80 backdrop-blur border-b border-border sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          <div className="text-xl font-semibold text-emerald">LegalEyes</div>
+          <nav className="hidden md:flex items-center gap-6 text-sm">
+            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
+            <a href="#how" className="text-muted-foreground hover:text-foreground transition-colors">How it works</a>
+            <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+            <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">Testimonials</a>
+            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+          </nav>
+        </div>
+      </header>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-background via-slate-50 to-emerald-50/30" id="about">
+        <div className="absolute inset-0 bg-[url('/subtle-legal-document-pattern-background.jpg')] opacity-5"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-emerald/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-emerald rounded-full animate-ping"></div>
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-gold rounded-full animate-ping delay-500"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
+          <div className="text-center">
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-2 bg-gradient-emerald text-white px-6 py-3 rounded-full text-sm font-medium mb-6 animate-fade-in shadow-lg animate-pulse-glow">
+                <AlertTriangle className="h-4 w-4" />
+                <span className="font-semibold">Trusted by 500+ businesses</span>
+                <Zap className="h-4 w-4" />
+              </div>
+
+              <h1 className="text-6xl md:text-8xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)] text-balance animate-fade-in-up tracking-tight">
+                Contracts, made <span className="text-emerald">clear</span>.
+              </h1>
+
+              <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto text-balance font-[family-name:var(--font-inter)] animate-fade-in-up delay-200">
+                Reviewed by <span className="text-emerald font-semibold">real lawyers</span>, not algorithms.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up delay-300">
+              <Button
+                size="lg"
+                className="text-lg px-10 py-7 bg-gradient-emerald hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform text-white font-semibold animate-shimmer"
+              >
+                <Upload className="mr-2 h-5 w-5" />
+                Upload Contract Now
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-semibold"
+              >
+                See Pricing
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-6 text-sm animate-fade-in-up delay-500">
+              <Badge
+                variant="secondary"
+                className="px-6 py-3 bg-white border border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 font-medium"
+              >
+                <CheckCircle className="mr-2 h-4 w-4" />
+                Flat Pricing
+              </Badge>
+              <Badge
+                variant="secondary"
+                className="px-6 py-3 bg-white border border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-medium"
+              >
+                <Shield className="mr-2 h-4 w-4" />
+                NDA-First Workflow
+              </Badge>
+              <Badge
+                variant="secondary"
+                className="px-6 py-3 bg-white border border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white transition-all duration-300 font-medium"
+              >
+                <Clock className="mr-2 h-4 w-4" />
+                48h Turnaround
+              </Badge>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why LegalEyes Section */}
+      <section className="py-24 bg-gradient-to-b from-slate-50/50 to-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
+              Why <span className="text-emerald">LegalEyes</span>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto text-balance">
+              <span className="text-gold font-semibold">100+ years</span> of cumulative experience across real lawyers.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/30 hover:to-white">
+              <CardContent className="pt-6">
+                <div className="bg-gradient-to-br from-emerald to-emerald-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Users className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
+                  Human Expertise
+                </h3>
+                <p className="text-slate-600 text-lg">
+                  Real lawyers with decades of experience review every contract personally.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-yellow-50/30 hover:to-white">
+              <CardContent className="pt-6">
+                <div className="bg-gradient-to-br from-gold to-yellow-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <MessageSquare className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
+                  Plain Language
+                </h3>
+                <p className="text-slate-600 text-lg">
+                  Complex legal jargon translated into clear, actionable insights.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-blue-50/30 hover:to-white">
+              <CardContent className="pt-6">
+                <div className="bg-gradient-to-br from-deep-blue to-blue-800 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Eye className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
+                  Direct Counsel
+                </h3>
+                <p className="text-slate-600 text-lg">
+                  Face-to-face consultations to walk through critical clauses and risks.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-24 relative bg-gradient-to-r from-slate-50/30 via-white to-slate-50/30" id="how">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
+              How It <span className="text-emerald">Works</span>
+            </h2>
+            <p className="text-xl text-slate-600">
+              Simple, secure, and <span className="text-emerald font-semibold">straightforward</span>
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center relative">
+              <div className="bg-gradient-emerald rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow">
+                <span className="text-3xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
+                Upload Securely
+              </h3>
+              <p className="text-slate-600 text-lg">
+                Upload your contract through our{" "}
+                <span className="text-emerald font-semibold">bank-grade encrypted</span> platform with full
+                confidentiality.
+              </p>
+              <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-emerald/50 to-transparent"></div>
+            </div>
+
+            <div className="text-center relative">
+              <div className="bg-gradient-gold rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow delay-200">
+                <span className="text-3xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
+                Expert Review
+              </h3>
+              <p className="text-slate-600 text-lg">
+                <span className="text-gold font-semibold">Experienced lawyers</span> review, redline, and identify key
+                risks and opportunities.
+              </p>
+              <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-gold/50 to-transparent"></div>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-deep-blue rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow delay-500">
+                <span className="text-3xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
+                Get Results
+              </h3>
+              <p className="text-slate-600 text-lg">
+                Receive detailed analysis, <span className="text-deep-blue font-semibold">plain-English summary</span>,
+                and optional consultation call.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-24 bg-gradient-to-b from-slate-50/50 to-background" id="pricing">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
+              <span className="text-emerald">Transparent</span> Pricing
+            </h2>
+            <p className="text-xl text-slate-600">
+              No hidden charges, <span className="text-emerald font-semibold">no surprises</span>
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-deep-blue/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <CardContent className="pt-6 relative">
+                <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
+                  Per Contract
+                </h3>
+                <p className="text-slate-600 mb-6 text-lg">Perfect for occasional contract reviews</p>
+                <div className="text-5xl font-bold text-emerald mb-6 flex items-baseline">
+                  Flat Fee
+                  <span className="text-sm font-normal text-slate-500 ml-2">per contract</span>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
+                    <span className="text-lg">Complete contract review</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
+                    <span className="text-lg">Plain-English summary</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
+                    <span className="text-lg">48-hour turnaround</span>
+                  </li>
+                </ul>
+                <Button className="w-full bg-deep-blue hover:bg-deep-blue/90 hover:scale-105 shadow-xl hover:shadow-blue-500/25 transition-all duration-300 text-lg py-6 font-semibold">
+                  Get Started
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden">
+              <div className="absolute top-4 right-4">
+                <Badge className="bg-gradient-emerald text-white px-4 py-2 font-semibold animate-pulse-glow">
+                  Most Popular
+                </Badge>
+              </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <CardContent className="pt-6 relative">
+                <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
+                  Retainer
+                </h3>
+                <p className="text-slate-600 mb-6 text-lg">Monthly review package for regular needs</p>
+                <div className="text-5xl font-bold text-emerald mb-6 flex items-baseline">
+                  Monthly
+                  <span className="text-sm font-normal text-slate-500 ml-2">subscription</span>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
+                    <span className="text-lg">Multiple contract reviews</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
+                    <span className="text-lg">Priority support</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
+                    <span className="text-lg">Face-to-face consultations</span>
+                  </li>
+                </ul>
+                <Button className="w-full bg-gradient-emerald hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold animate-shimmer">
+                  Contact Sales
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-slate-600">
+              Transparent pricing available in <span className="text-gold font-semibold">INR and USD</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 relative" id="testimonials">
+        <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-emerald mb-6 font-[family-name:var(--font-merriweather)]">
+              What Our Clients Say
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
+              <CardContent className="pt-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-lg mb-6 text-balance italic">
+                  "All our contracts are vetted by LegalEyes. It's like insurance, but smarter."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
+                    <Award className="h-5 w-5 text-emerald" />
+                  </div>
+                  <div className="text-sm text-muted-foreground">Startup Founder</div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
+              <CardContent className="pt-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-lg mb-6 text-balance italic">
+                  "This is like having your own in-house legal team on call — minus the cost."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
+                    <Award className="h-5 w-5 text-emerald" />
+                  </div>
+                  <div className="text-sm text-muted-foreground">Business Owner</div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
+              <CardContent className="pt-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-lg mb-6 text-balance italic">
+                  "As a tech startup, our priorities lie elsewhere. Outsourcing all legal to LegalEyes has saved us
+                  countless hours and exorbitant fees. Must recommend for early-stage founders."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
+                    <Award className="h-5 w-5 text-emerald" />
+                  </div>
+                  <div className="text-sm text-muted-foreground">Tech Startup CEO</div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-24 bg-gradient-to-b from-background to-slate-50/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">Frequently Asked Questions</h2>
+            <p className="text-muted-foreground">Straight answers to the most common questions.</p>
+          </div>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>Do you use AI for reviews?</AccordionTrigger>
+              <AccordionContent>
+                We may use AI for optional pre-scanning to highlight areas of interest, but every review is performed by experienced human lawyers.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Will you walk me through what each clause means?</AccordionTrigger>
+              <AccordionContent>
+                Yes. We provide a plain-English explanation of important clauses, why they exist, and how they affect your rights and obligations.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Can you suggest what to push back on or let go?</AccordionTrigger>
+              <AccordionContent>
+                Absolutely. We highlight negotiable points, recommend what’s worth pushing on, and where it’s safe to accept as-is to keep deals moving.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>Do you help with redlines and edits?</AccordionTrigger>
+              <AccordionContent>
+                Yes. We can return annotated comments, redlines, or a summary with suggested language you can paste directly.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>What is the typical turnaround time?</AccordionTrigger>
+              <AccordionContent>
+                Standard turnaround is 24–48 hours for most contracts, with urgent options available when needed.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-6">
+              <AccordionTrigger>How do you handle confidentiality?</AccordionTrigger>
+              <AccordionContent>
+                NDA-first workflow, secure storage, and least-privilege access. Your documents stay private.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      {/* Closing CTA Section */}
+      <section className="py-24 bg-gradient-emerald text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-32 -translate-y-32 animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full translate-x-48 translate-y-48 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-white/20 rounded-full animate-ping"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance">
+            Don't trust templates. <br />
+            Trust <span className="text-gold">people</span>.
+          </h2>
+          <p className="text-2xl mb-8 opacity-90 max-w-2xl mx-auto text-balance">
+            Your contracts deserve <span className="text-gold font-semibold">human expertise</span>, not algorithmic
+            guesswork.
+          </p>
+          <Button
+            size="lg"
+            variant="secondary"
+            className="text-xl px-12 py-8 bg-white text-emerald hover:bg-gold/10 hover:text-emerald shadow-2xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-110 font-bold animate-pulse-glow"
+          >
+            Get Your First Review
+            <ArrowRight className="ml-2 h-6 w-6" />
+          </Button>
+        </div>
+      </section>
+
+      {/* Prominent Contact Section */}
+      <section id="contact" className="py-24 bg-gradient-to-b from-slate-50 to-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-[family-name:var(--font-merriweather)] text-emerald">Get in touch</h2>
+            <p className="text-lg text-muted-foreground">Have a contract to review or questions about pricing? We’ll respond promptly.</p>
+          </div>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault()
+              const form = e.currentTarget as HTMLFormElement
+              const formData = new FormData(form)
+              const name = String(formData.get('name') || '')
+              const email = String(formData.get('email') || '')
+              const message = String(formData.get('message') || '')
+              const subject = encodeURIComponent(`Inquiry from ${name}`)
+              const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
+              window.location.href = `mailto:hello@legaleyes.com?subject=${subject}&body=${body}`
+            }}
+            className="max-w-2xl mx-auto grid gap-4"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Your name"
+                className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="you@example.com"
+                className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              />
+            </div>
+            <textarea
+              name="message"
+              required
+              rows={5}
+              placeholder="Tell us briefly about your contract or question"
+              className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            />
+            <div className="flex items-center gap-4 justify-center">
+              <Button type="submit" className="bg-emerald text-white hover:bg-emerald/90">Send email</Button>
+              <a href="#pricing" className="px-6 py-3 rounded-md border border-emerald text-emerald hover:bg-emerald/10 transition-colors">View pricing</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-b from-card to-card/50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <h3 className="text-xl font-semibold text-emerald mb-1 font-[family-name:var(--font-merriweather)]">LegalEyes</h3>
+              <p className="text-muted-foreground text-sm">Contracts, made clear.</p>
+            </div>
+            <nav className="flex items-center gap-6 text-sm">
+              <a href="#about" className="text-muted-foreground hover:text-emerald transition-colors">About</a>
+              <a href="#how" className="text-muted-foreground hover:text-emerald transition-colors">How it works</a>
+              <a href="#pricing" className="text-muted-foreground hover:text-emerald transition-colors">Pricing</a>
+              <a href="#faq" className="text-muted-foreground hover:text-emerald transition-colors">FAQ</a>
+              <a href="#contact" className="text-muted-foreground hover:text-emerald transition-colors">Contact</a>
+            </nav>
+            <div className="text-sm text-muted-foreground">© 2024 LegalEyes</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
