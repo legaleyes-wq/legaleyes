@@ -422,7 +422,7 @@ export default function IndividualContractPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white">
+            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   <div className="flex text-gold">
@@ -448,7 +448,7 @@ export default function IndividualContractPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white">
+            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   <div className="flex text-gold">
@@ -474,7 +474,7 @@ export default function IndividualContractPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white">
+            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   <div className="flex text-gold">
@@ -551,7 +551,7 @@ export default function IndividualContractPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden h-full flex flex-col">
+            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-emerald text-white px-4 py-2 font-semibold">
                   Most Popular

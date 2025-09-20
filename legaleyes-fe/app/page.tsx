@@ -315,7 +315,7 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white relative overflow-hidden h-full flex flex-col">
+            <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
               <div className="absolute top-0 right-0 w-32 h-32 bg-deep-blue/10 rounded-full -translate-y-16 translate-x-16"></div>
               <CardContent className="pt-6 relative flex flex-col h-full">
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -346,7 +346,7 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden h-full flex flex-col">
+            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-gradient-emerald text-white px-4 py-2 font-semibold">
                   Most Popular
@@ -382,7 +382,7 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-gold/30 hover:border-gold/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-yellow-50/30 to-white relative overflow-hidden h-full flex flex-col">
+            <Card className="p-8 border-2 border-gold/30 hover:border-gold/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-yellow-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-gradient-gold text-white px-4 py-2 font-semibold">
                   Pro
