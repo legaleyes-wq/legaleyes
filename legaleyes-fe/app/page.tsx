@@ -38,7 +38,6 @@ export default function LegalEyesPage() {
             <a href="#contact" className="inline-flex items-center rounded-md bg-emerald px-4 py-2 text-white text-sm font-medium hover:bg-emerald/90 transition-colors">Get Started</a>
           </div>
           {/* subtle blinking dot */}
-          <div aria-hidden className="pointer-events-none absolute top-1/2 -translate-y-1/2 right-4 size-1.5 rounded-full bg-emerald/60 animate-ping" />
         </div>
       </header>
       {/* Hero Section */}
@@ -46,23 +45,23 @@ export default function LegalEyesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
           <div className="text-center">
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 bg-gradient-emerald text-white px-6 py-3 rounded-full text-sm font-medium mb-6 animate-fade-in shadow-lg animate-pulse-glow">
+              <div className="inline-flex items-center gap-2 bg-gradient-emerald text-white px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg">
                 <AlertTriangle className="h-4 w-4" />
                 <span className="font-semibold">Trusted by 500+ businesses</span>
                 <Zap className="h-4 w-4" />
               </div>
 
-              <h1 className="text-6xl md:text-8xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)] text-balance animate-fade-in-up tracking-tight">
+              <h1 className="text-6xl md:text-8xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)] text-balance tracking-tight">
                 Contracts, made <span className="text-emerald">clear</span>.
               </h1>
 
-              <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto text-balance font-[family-name:var(--font-inter)] animate-fade-in-up delay-200">
+              <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto text-balance font-[family-name:var(--font-inter)]">
                 Reviewed by <span className="text-emerald font-semibold">real lawyers</span>, not algorithms.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up delay-300">
-              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform text-white font-semibold animate-shimmer">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform text-white font-semibold">
                 <a href="#contact">
                   Start your review
                 </a>
@@ -72,7 +71,7 @@ export default function LegalEyesPage() {
               </Button>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm animate-fade-in-up delay-500">
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
               <Badge
                 variant="secondary"
                 className="px-6 py-3 bg-white border border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 font-medium"
@@ -101,12 +100,7 @@ export default function LegalEyesPage() {
 
       {/* Why LegalEyes Section */}
       <BackgroundSignature className="py-24 bg-background">
-        {/* subtle decorative dots/boxes */}
-        <div aria-hidden className="pointer-events-none absolute -top-6 left-6 size-2 rounded-full bg-emerald/50 animate-ping"></div>
-        <div aria-hidden className="pointer-events-none absolute top-10 right-8 h-4 w-4 rotate-12 border border-emerald/20"></div>
-        <div aria-hidden className="pointer-events-none absolute bottom-10 left-10 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
-        <div aria-hidden className="pointer-events-none absolute top-1/3 right-1/4 size-1 rounded-full bg-emerald/30 animate-ping"></div>
-        <div aria-hidden className="pointer-events-none absolute bottom-1/3 left-1/3 size-1.5 rounded-full bg-emerald/35 animate-ping"></div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -166,12 +160,6 @@ export default function LegalEyesPage() {
       {/* How It Works Section */}
       <BackgroundSignature className="py-24 bg-background" id="how">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* subtle decorative dots/boxes */}
-          <div aria-hidden className="pointer-events-none absolute -left-3 top-8 size-2 rounded-full bg-emerald/50 animate-ping"></div>
-          <div aria-hidden className="pointer-events-none absolute -right-4 bottom-8 h-5 w-5 -rotate-6 border border-emerald/20"></div>
-          <div aria-hidden className="pointer-events-none absolute right-16 top-6 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
-          <div aria-hidden className="pointer-events-none absolute left-1/4 top-1/2 size-1 rounded-full bg-emerald/30 animate-ping"></div>
-          <div aria-hidden className="pointer-events-none absolute right-1/3 bottom-1/4 size-1.5 rounded-full bg-emerald/35 animate-ping"></div>
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               How It <span className="text-emerald">Works</span>
@@ -183,7 +171,7 @@ export default function LegalEyesPage() {
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center relative">
-              <div className="bg-gradient-emerald rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow">
+              <div className="bg-gradient-emerald rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl">
                 <span className="text-3xl font-bold text-white">1</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -196,7 +184,7 @@ export default function LegalEyesPage() {
             </div>
 
             <div className="text-center relative">
-              <div className="bg-gradient-gold rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow delay-200">
+              <div className="bg-gradient-gold rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl">
                 <span className="text-3xl font-bold text-white">2</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -210,7 +198,7 @@ export default function LegalEyesPage() {
             </div>
 
             <div className="text-center">
-              <div className="bg-deep-blue rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow delay-500">
+              <div className="bg-deep-blue rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl">
                 <span className="text-3xl font-bold text-white">3</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -317,11 +305,6 @@ export default function LegalEyesPage() {
 
       {/* Pricing Section */}
       <BackgroundSignature className="py-24 bg-background" id="pricing">
-        <div aria-hidden className="pointer-events-none absolute top-6 left-8 size-2 rounded-full bg-emerald/50 animate-ping"></div>
-        <div aria-hidden className="pointer-events-none absolute bottom-6 right-8 h-4 w-4 rotate-6 border border-emerald/20"></div>
-        <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/4 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
-        <div aria-hidden className="pointer-events-none absolute top-1/4 right-1/3 size-1 rounded-full bg-emerald/30 animate-ping"></div>
-        <div aria-hidden className="pointer-events-none absolute bottom-1/3 left-1/2 size-1.5 rounded-full bg-emerald/35 animate-ping"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -366,7 +349,7 @@ export default function LegalEyesPage() {
 
             <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden">
               <div className="absolute top-4 right-4">
-                <Badge className="bg-gradient-emerald text-white px-4 py-2 font-semibold animate-pulse-glow">
+                <Badge className="bg-gradient-emerald text-white px-4 py-2 font-semibold">
                   Most Popular
                 </Badge>
               </div>
@@ -394,7 +377,7 @@ export default function LegalEyesPage() {
                     <span className="text-lg">Faster turnaround</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-gradient-emerald hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold animate-shimmer">
+                <Button asChild className="w-full bg-gradient-emerald hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold">
                   <a href="#contact">Contact Sales</a>
                 </Button>
               </CardContent>
@@ -450,7 +433,6 @@ export default function LegalEyesPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div aria-hidden className="pointer-events-none absolute -top-3 left-1/2 size-2 rounded-full bg-emerald/30"></div>
-          <div aria-hidden className="pointer-events-none absolute -top-3 left-1/3 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
           <div aria-hidden className="pointer-events-none absolute -bottom-4 right-10 h-5 w-5 rotate-12 border border-emerald/20"></div>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-emerald mb-6 font-[family-name:var(--font-merriweather)]">

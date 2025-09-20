@@ -43,7 +43,6 @@ export default function IndividualContractPage() {
             <a href="#contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-white text-sm font-medium hover:bg-blue-700 transition-colors">Protect Me</a>
           </div>
           {/* subtle blinking dot */}
-          <div aria-hidden className="pointer-events-none absolute top-1/2 -translate-y-1/2 right-4 size-1.5 rounded-full bg-blue-600/60 animate-ping" />
         </div>
       </header>
 
@@ -52,23 +51,23 @@ export default function IndividualContractPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
           <div className="text-center">
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6 animate-fade-in shadow-lg animate-pulse-glow">
+              <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg">
                 <User className="h-4 w-4" />
                 <span className="font-semibold">Individual contract reviews</span>
                 <Zap className="h-4 w-4" />
               </div>
 
-              <h1 className="text-6xl md:text-8xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)] text-balance animate-fade-in-up tracking-tight">
+              <h1 className="text-6xl md:text-8xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)] text-balance tracking-tight">
               Contracts, made <span className="text-blue-600">clear</span>.
               </h1>
 
-              <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto text-balance font-[family-name:var(--font-inter)] animate-fade-in-up delay-200">
+              <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto text-balance font-[family-name:var(--font-inter)]">
                 Don't sign anything <span className="text-blue-600 font-semibold">without knowing</span> what it means.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up delay-300">
-              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-blue hover:scale-110 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform text-white font-semibold animate-shimmer">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-blue hover:scale-110 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform text-white font-semibold">
                 <a href="#contact">
                   Protect yourself now
                 </a>
@@ -78,7 +77,7 @@ export default function IndividualContractPage() {
               </Button>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm animate-fade-in-up delay-500">
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
               <Badge
                 variant="secondary"
                 className="px-6 py-3 bg-white border border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 font-medium"
@@ -107,11 +106,7 @@ export default function IndividualContractPage() {
 
       {/* Contract Types Section */}
       <BackgroundSignature className="py-24 bg-background">
-        {/* subtle decorative dots */}
-        <div aria-hidden className="pointer-events-none absolute -top-6 left-6 size-2 rounded-full bg-blue-500/50 animate-ping"></div>
-        <div aria-hidden className="pointer-events-none absolute top-10 right-8 h-4 w-4 rotate-12 border border-blue-500/20"></div>
-        <div aria-hidden className="pointer-events-none absolute bottom-10 left-10 size-1.5 rounded-full bg-blue-500/40 animate-ping"></div>
-        <div aria-hidden className="pointer-events-none absolute top-1/3 right-1/4 size-1 rounded-full bg-blue-500/30 animate-ping"></div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -261,16 +256,21 @@ export default function IndividualContractPage() {
                 </div>
               </div>
             </div>
-            <div className="bg-red-50 border-2 border-red-200 rounded-lg p-8">
+            <div className="bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-2xl p-8 shadow-lg">
               <div className="text-center">
-                <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-red-600 mb-4">The Reality</h3>
-                <p className="text-lg text-slate-700 mb-6">
-                  <strong>95% of people</strong> sign contracts without reading them properly. 
-                  <strong>Don't be trapped</strong> by terms you didn't understand.
+                <div className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Shield className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-4">Smart Protection</h3>
+                <p className="text-lg text-slate-600 mb-6">
+                  <span className="font-semibold text-slate-800">95% of people</span> sign contracts without reading them properly. 
+                  <span className="font-semibold text-slate-800">Don't be trapped</span> by terms you didn't understand.
                 </p>
-                <div className="text-3xl font-bold text-red-600">₹199 could save you ₹50,000+</div>
-                <p className="text-sm text-slate-600 mt-2">in future legal fees and penalties</p>
+                <div className="bg-blue-600 text-white rounded-xl p-4 mb-4">
+                  <div className="text-2xl font-bold">₹199 could save you ₹50,000+</div>
+                  <p className="text-blue-100 text-sm mt-1">in future legal fees and penalties</p>
+                </div>
+                <p className="text-sm text-slate-500">Professional review by experienced lawyers</p>
               </div>
             </div>
           </div>
@@ -280,11 +280,6 @@ export default function IndividualContractPage() {
       {/* How It Works Section */}
       <BackgroundSignature className="py-24 bg-background" id="how">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* subtle decorative dots */}
-          <div aria-hidden className="pointer-events-none absolute -left-3 top-8 size-2 rounded-full bg-blue-500/50 animate-ping"></div>
-          <div aria-hidden className="pointer-events-none absolute -right-4 bottom-8 h-5 w-5 -rotate-6 border border-blue-500/20"></div>
-          <div aria-hidden className="pointer-events-none absolute right-16 top-6 size-1.5 rounded-full bg-blue-500/40 animate-ping"></div>
-          <div aria-hidden className="pointer-events-none absolute left-1/4 top-1/2 size-1 rounded-full bg-blue-500/30 animate-ping"></div>
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               How It <span className="text-blue-600">Works</span>
@@ -296,7 +291,7 @@ export default function IndividualContractPage() {
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center relative">
-              <div className="bg-blue-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow">
+              <div className="bg-blue-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl">
                 <span className="text-3xl font-bold text-white">1</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -309,7 +304,7 @@ export default function IndividualContractPage() {
             </div>
 
             <div className="text-center relative">
-              <div className="bg-blue-500 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow delay-200">
+              <div className="bg-blue-500 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl">
                 <span className="text-3xl font-bold text-white">2</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -322,7 +317,7 @@ export default function IndividualContractPage() {
             </div>
 
             <div className="text-center">
-              <div className="bg-blue-700 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse-glow delay-500">
+              <div className="bg-blue-700 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl">
                 <span className="text-3xl font-bold text-white">3</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -359,11 +354,6 @@ export default function IndividualContractPage() {
 
       {/* Pricing Section */}
       <BackgroundSignature className="py-24 bg-background" id="pricing">
-        {/* subtle decorative dots */}
-        <div aria-hidden className="pointer-events-none absolute top-6 left-8 size-2 rounded-full bg-blue-500/50 animate-ping"></div>
-        <div aria-hidden className="pointer-events-none absolute bottom-6 right-8 h-4 w-4 rotate-6 border border-blue-500/20"></div>
-        <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/4 size-1.5 rounded-full bg-blue-500/40 animate-ping"></div>
-        <div aria-hidden className="pointer-events-none absolute top-1/4 right-1/3 size-1 rounded-full bg-blue-500/30 animate-ping"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
