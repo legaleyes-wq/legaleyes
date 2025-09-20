@@ -297,6 +297,10 @@
   background: linear-gradient(135deg, #046a38, #d4af37);
 }
 
+.bg-gradient-blue {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
 /* Added hover effects for emerald theme */
 .hover\:bg-emerald-dark:hover {
   background-color: #034a28;

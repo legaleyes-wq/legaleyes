@@ -35,7 +35,7 @@ export default function LegalEyesPage() {
             <a href="#contact" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Contact</a>
           </nav>
           <div className="hidden md:block">
-            <a href="#contact" className="inline-flex items-center rounded-md bg-emerald px-4 py-2 text-white text-sm font-medium hover:bg-emerald/90 transition-colors">Start Review</a>
+            <a href="#contact" className="inline-flex items-center rounded-md bg-emerald px-4 py-2 text-white text-sm font-medium hover:bg-emerald/90 transition-colors">Get Started</a>
           </div>
           {/* subtle blinking dot */}
           <div aria-hidden className="pointer-events-none absolute top-1/2 -translate-y-1/2 right-4 size-1.5 rounded-full bg-emerald/60 animate-ping" />
@@ -64,7 +64,7 @@ export default function LegalEyesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up delay-300">
               <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform text-white font-semibold animate-shimmer">
                 <a href="#contact">
-                  Get your first review
+                  Start your review
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-semibold">
@@ -105,6 +105,8 @@ export default function LegalEyesPage() {
         <div aria-hidden className="pointer-events-none absolute -top-6 left-6 size-2 rounded-full bg-emerald/50 animate-ping"></div>
         <div aria-hidden className="pointer-events-none absolute top-10 right-8 h-4 w-4 rotate-12 border border-emerald/20"></div>
         <div aria-hidden className="pointer-events-none absolute bottom-10 left-10 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
+        <div aria-hidden className="pointer-events-none absolute top-1/3 right-1/4 size-1 rounded-full bg-emerald/30 animate-ping"></div>
+        <div aria-hidden className="pointer-events-none absolute bottom-1/3 left-1/3 size-1.5 rounded-full bg-emerald/35 animate-ping"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -116,7 +118,7 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/30 hover:to-white">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white">
               <CardContent className="pt-6">
                 <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-emerald/30 bg-white">
                   <Users className="h-8 w-8 text-emerald" />
@@ -130,7 +132,7 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-yellow-50/30 hover:to-white">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white">
               <CardContent className="pt-6">
                 <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-gold/30 bg-white">
                   <MessageSquare className="h-8 w-8 text-gold" />
@@ -144,7 +146,7 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-blue-50/30 hover:to-white">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white">
               <CardContent className="pt-6">
                 <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-deep-blue/30 bg-white">
                   <Eye className="h-8 w-8 text-deep-blue" />
@@ -168,6 +170,8 @@ export default function LegalEyesPage() {
           <div aria-hidden className="pointer-events-none absolute -left-3 top-8 size-2 rounded-full bg-emerald/50 animate-ping"></div>
           <div aria-hidden className="pointer-events-none absolute -right-4 bottom-8 h-5 w-5 -rotate-6 border border-emerald/20"></div>
           <div aria-hidden className="pointer-events-none absolute right-16 top-6 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
+          <div aria-hidden className="pointer-events-none absolute left-1/4 top-1/2 size-1 rounded-full bg-emerald/30 animate-ping"></div>
+          <div aria-hidden className="pointer-events-none absolute right-1/3 bottom-1/4 size-1.5 rounded-full bg-emerald/35 animate-ping"></div>
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               How It <span className="text-emerald">Works</span>
@@ -316,6 +320,8 @@ export default function LegalEyesPage() {
         <div aria-hidden className="pointer-events-none absolute top-6 left-8 size-2 rounded-full bg-emerald/50 animate-ping"></div>
         <div aria-hidden className="pointer-events-none absolute bottom-6 right-8 h-4 w-4 rotate-6 border border-emerald/20"></div>
         <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/4 size-1.5 rounded-full bg-emerald/40 animate-ping"></div>
+        <div aria-hidden className="pointer-events-none absolute top-1/4 right-1/3 size-1 rounded-full bg-emerald/30 animate-ping"></div>
+        <div aria-hidden className="pointer-events-none absolute bottom-1/3 left-1/2 size-1.5 rounded-full bg-emerald/35 animate-ping"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -352,8 +358,8 @@ export default function LegalEyesPage() {
                     <span className="text-lg">48-hour turnaround</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-deep-blue hover:bg-deep-blue/90 hover:scale-105 shadow-xl hover:shadow-blue-500/25 transition-all duration-300 text-lg py-6 font-semibold">
-                  <a href="#contact">Get Started</a>
+                <Button asChild className="w-full bg-emerald hover:bg-emerald/90 hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold">
+                  <a href="#contact">Start Review</a>
                 </Button>
               </CardContent>
             </Card>
@@ -577,7 +583,7 @@ export default function LegalEyesPage() {
             className="text-xl px-10 py-6 bg-emerald text-white hover:bg-emerald/90 shadow-xl hover:shadow-emerald/20 transition-colors font-semibold"
           >
             <a href="#contact">
-              Get your first review
+              Start your review
               <ArrowRight className="ml-2 h-6 w-6" />
             </a>
           </Button>
@@ -629,7 +635,7 @@ export default function LegalEyesPage() {
               className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             />
             <div className="flex items-center gap-4 justify-center">
-              <Button type="submit" className="bg-emerald text-white hover:bg-emerald/90">Send email</Button>
+              <Button type="submit" className="bg-emerald text-white hover:bg-emerald/90">Get Started</Button>
               <a href="#pricing" className="px-6 py-3 rounded-md border border-emerald text-emerald hover:bg-emerald/10 transition-colors">View pricing</a>
             </div>
           </form>
