@@ -505,7 +505,7 @@ export default function IndividualContractPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 font-[family-name:var(--font-merriweather)] text-emerald">Get your review</h2>
-            <p className="text-lg text-muted-foreground">Have a contract to review? We'll respond within 2 hours.</p>
+            <p className="text-lg text-muted-foreground">Let's get started</p>
           </div>
           <form
             onSubmit={(e) => {

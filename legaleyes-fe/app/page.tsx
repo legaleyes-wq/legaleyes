@@ -589,7 +589,7 @@ export default function LegalEyesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 font-[family-name:var(--font-merriweather)] text-emerald">Get in touch</h2>
-            <p className="text-lg text-muted-foreground">Have a contract to review or questions about pricing? We’ll respond promptly.</p>
+            <p className="text-lg text-muted-foreground">Let's get started</p>
           </div>
           <form
             onSubmit={(e) => {
