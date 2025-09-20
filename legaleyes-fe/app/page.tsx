@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import BackgroundSignature from "@/components/background-signature"
 import {
   Shield,
   Users,
@@ -41,7 +40,7 @@ export default function LegalEyesPage() {
         </div>
       </header>
       {/* Hero Section */}
-      <BackgroundSignature className="bg-background" id="about">
+      <div className="bg-white" id="about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
           <div className="text-center">
             <div className="mb-8">
@@ -96,10 +95,10 @@ export default function LegalEyesPage() {
             </div>
           </div>
         </div>
-      </BackgroundSignature>
+      </div>
 
       {/* Why LegalEyes Section */}
-      <BackgroundSignature className="py-24 bg-background">
+      <div className="py-24 bg-white">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -155,10 +154,10 @@ export default function LegalEyesPage() {
             </Card>
           </div>
         </div>
-      </BackgroundSignature>
+      </div>
 
       {/* How It Works Section */}
-      <BackgroundSignature className="py-24 bg-background" id="how">
+      <div className="py-24 bg-white" id="how">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -211,10 +210,10 @@ export default function LegalEyesPage() {
           </div>
           <p className="text-center text-sm text-muted-foreground mt-10">NDA-first workflow. Secure storage. Confidential review.</p>
         </div>
-      </BackgroundSignature>
+      </div>
 
       {/* Stats Section */}
-      <BackgroundSignature className="py-16 bg-background">
+      <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
@@ -231,10 +230,10 @@ export default function LegalEyesPage() {
             </div>
           </div>
         </div>
-      </BackgroundSignature>
+      </div>
 
       {/* Testimonials Section (moved before pricing for trust) */}
-      <BackgroundSignature className="py-24 bg-background" id="testimonials">
+      <div className="py-24 bg-white" id="testimonials">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-emerald mb-6 font-[family-name:var(--font-merriweather)]">
@@ -301,10 +300,10 @@ export default function LegalEyesPage() {
             </Card>
           </div>
         </div>
-      </BackgroundSignature>
+      </div>
 
       {/* Pricing Section */}
-      <BackgroundSignature className="py-24 bg-background" id="pricing">
+      <div className="py-24 bg-white" id="pricing">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -316,18 +315,18 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white relative overflow-hidden">
+            <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white relative overflow-hidden h-full flex flex-col">
               <div className="absolute top-0 right-0 w-32 h-32 bg-deep-blue/10 rounded-full -translate-y-16 translate-x-16"></div>
-              <CardContent className="pt-6 relative">
+              <CardContent className="pt-6 relative flex flex-col h-full">
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
                   Per Contract
                 </h3>
-                <p className="text-slate-600 mb-6 text-lg">One-time contract review</p>
+                <p className="text-slate-600 mb-6 text-lg min-h-[3rem] flex items-center">One-time contract review</p>
                 <div className="text-5xl font-bold text-emerald mb-6 flex items-baseline">
                   Flat Fee
                   <span className="text-sm font-normal text-slate-500 ml-2">per contract</span>
                 </div>
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 flex-grow">
                   <li className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
                     <span className="text-lg">Complete contract review</span>
@@ -341,29 +340,29 @@ export default function LegalEyesPage() {
                     <span className="text-lg">48-hour turnaround</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-emerald hover:bg-emerald/90 hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold">
+                <Button asChild className="w-full bg-emerald hover:bg-emerald/90 hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold mt-auto">
                   <a href="#contact">Start Review</a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden">
+            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden h-full flex flex-col">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-gradient-emerald text-white px-4 py-2 font-semibold">
                   Most Popular
                 </Badge>
               </div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-emerald/10 rounded-full -translate-y-16 translate-x-16"></div>
-              <CardContent className="pt-6 relative">
+              <CardContent className="pt-6 relative flex flex-col h-full">
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
                   Retainer
                 </h3>
-                <p className="text-slate-600 mb-6 text-lg">Monthly contract reviews</p>
+                <p className="text-slate-600 mb-6 text-lg min-h-[3rem] flex items-center">Monthly contract reviews</p>
                 <div className="text-5xl font-bold text-emerald mb-6 flex items-baseline">
                   Monthly
                   <span className="text-sm font-normal text-slate-500 ml-2">subscription</span>
                 </div>
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 flex-grow">
                   <li className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
                     <span className="text-lg">Multiple contract reviews</span>
@@ -377,29 +376,29 @@ export default function LegalEyesPage() {
                     <span className="text-lg">Faster turnaround</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-gradient-emerald hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold">
+                <Button asChild className="w-full bg-gradient-emerald hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold mt-auto">
                   <a href="#contact">Contact Sales</a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-gold/30 hover:border-gold/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-yellow-50/30 to-white relative overflow-hidden">
+            <Card className="p-8 border-2 border-gold/30 hover:border-gold/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-yellow-50/30 to-white relative overflow-hidden h-full flex flex-col">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-gradient-gold text-white px-4 py-2 font-semibold">
                   Pro
                 </Badge>
               </div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full -translate-y-16 translate-x-16"></div>
-              <CardContent className="pt-6 relative">
+              <CardContent className="pt-6 relative flex flex-col h-full">
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
                   Retainer Pro
                 </h3>
-                <p className="text-slate-600 mb-6 text-lg">Everything in Retainer plus consultation</p>
+                <p className="text-slate-600 mb-6 text-lg min-h-[3rem] flex items-center">Everything in Retainer plus consultation</p>
                 <div className="text-5xl font-bold text-gold mb-6 flex items-baseline">
                   Premium
                   <span className="text-sm font-normal text-slate-500 ml-2">pricing</span>
                 </div>
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 flex-grow">
                   <li className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-gold mr-3 flex-shrink-0" />
                     <span className="text-lg">Everything in Retainer</span>
@@ -413,7 +412,7 @@ export default function LegalEyesPage() {
                     <span className="text-lg">Dedicated attorney</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-gradient-gold hover:scale-105 shadow-xl hover:shadow-yellow-500/25 transition-all duration-300 text-lg py-6 font-semibold">
+                <Button asChild className="w-full bg-gradient-gold hover:scale-105 shadow-xl hover:shadow-yellow-500/25 transition-all duration-300 text-lg py-6 font-semibold mt-auto">
                   <a href="#contact">Contact Sales</a>
                 </Button>
               </CardContent>
@@ -426,10 +425,10 @@ export default function LegalEyesPage() {
             </p>
           </div>
         </div>
-      </BackgroundSignature>
+      </div>
 
       {/* Testimonials Section */}
-      <BackgroundSignature className="py-24 bg-background" id="testimonials">
+      <div className="py-24 bg-white" id="testimonials">
         <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div aria-hidden className="pointer-events-none absolute -top-3 left-1/2 size-2 rounded-full bg-emerald/30"></div>
@@ -500,10 +499,10 @@ export default function LegalEyesPage() {
             </Card>
           </div>
         </div>
-      </BackgroundSignature>
+      </div>
 
       {/* FAQ Section */}
-      <BackgroundSignature id="faq" className="py-24 bg-background">
+      <div id="faq" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">Frequently Asked Questions</h2>
@@ -548,10 +547,10 @@ export default function LegalEyesPage() {
             </AccordionItem>
           </Accordion>
         </div>
-      </BackgroundSignature>
+      </div>
 
       {/* Closing CTA Section */}
-      <BackgroundSignature className="py-24 bg-background">
+      <div className="py-24 bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance text-slate">
             Contracts you understand.
@@ -570,10 +569,10 @@ export default function LegalEyesPage() {
             </a>
           </Button>
         </div>
-      </BackgroundSignature>
+      </div>
 
       {/* Prominent Contact Section */}
-      <BackgroundSignature id="contact" className="py-24 bg-background">
+      <div id="contact" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 font-[family-name:var(--font-merriweather)] text-emerald">Get in touch</h2>
@@ -622,7 +621,7 @@ export default function LegalEyesPage() {
             </div>
           </form>
         </div>
-      </BackgroundSignature>
+      </div>
 
       {/* Footer */}
       <footer className="bg-card py-12">
