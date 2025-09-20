@@ -30,7 +30,7 @@ export default function IndividualContractPage() {
       {/* Header */}
       <header className="bg-background/80 backdrop-blur border-b border-border sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative">
-          <div className="text-xl font-semibold text-emerald">LegalEyes</div>
+          <a href="/" className="text-xl font-semibold text-emerald hover:text-emerald/80 transition-colors">LegalEyes</a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="/" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Business</a>
             <a href="#about" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">About</a>
@@ -59,7 +59,7 @@ export default function IndividualContractPage() {
               </div>
 
               <h1 className="text-6xl md:text-8xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)] text-balance animate-fade-in-up tracking-tight">
-                Your contracts, <span className="text-emerald">protected</span>.
+                Contracts, <span className="text-emerald">protected</span>.
               </h1>
 
               <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto text-balance font-[family-name:var(--font-inter)] animate-fade-in-up delay-200">
@@ -558,7 +558,7 @@ export default function IndividualContractPage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <h3 className="text-xl font-semibold text-emerald mb-1 font-[family-name:var(--font-merriweather)]">LegalEyes</h3>
-              <p className="text-muted-foreground text-sm">Your contracts, protected.</p>
+              <p className="text-muted-foreground text-sm">Contracts, made clear.</p>
             </div>
             <nav className="flex items-center gap-6 text-sm">
               <a href="/" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Business</a>

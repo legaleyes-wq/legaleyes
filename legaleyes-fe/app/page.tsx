@@ -25,7 +25,7 @@ export default function LegalEyesPage() {
       {/* Header */}
       <header className="bg-background/80 backdrop-blur border-b border-border sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative">
-          <div className="text-xl font-semibold text-emerald">LegalEyes</div>
+          <a href="/" className="text-xl font-semibold text-emerald hover:text-emerald/80 transition-colors">LegalEyes</a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="/individual" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Individual</a>
             <a href="#about" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">About</a>
