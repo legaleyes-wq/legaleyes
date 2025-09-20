@@ -152,7 +152,7 @@ export default function LegalEyesPage() {
                   Direct Counsel
                 </h3>
                 <p className="text-slate-600 text-lg">
-                  Face-to-face consultations to walk through critical clauses and risks.
+                  Available in Retainer Pro for complex contracts and strategic guidance.
                 </p>
               </CardContent>
             </Card>
@@ -182,12 +182,10 @@ export default function LegalEyesPage() {
                 <span className="text-3xl font-bold text-white">1</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
-                Upload Securely
+                Upload Contract
               </h3>
               <p className="text-slate-600 text-lg">
-                Upload your contract through our{" "}
-                <span className="text-emerald font-semibold">bank-grade encrypted</span> platform with full
-                confidentiality.
+                Share your contract securely. We'll send an NDA and upload link after you contact us.
               </p>
               <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-emerald/50 to-transparent"></div>
             </div>
@@ -214,12 +212,11 @@ export default function LegalEyesPage() {
                 Get Results
               </h3>
               <p className="text-slate-600 text-lg">
-                Receive detailed analysis, <span className="text-deep-blue font-semibold">plain-English summary</span>,
-                and optional consultation call.
+                Receive detailed analysis and <span className="text-deep-blue font-semibold">plain-English summary</span>.
               </p>
             </div>
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-10">NDA-first workflow. Bank-grade encryption. Least-privilege access.</p>
+          <p className="text-center text-sm text-muted-foreground mt-10">NDA-first workflow. Secure storage. Confidential review.</p>
         </div>
       </BackgroundSignature>
 
@@ -308,14 +305,14 @@ export default function LegalEyesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-deep-blue/10 rounded-full -translate-y-16 translate-x-16"></div>
               <CardContent className="pt-6 relative">
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
                   Per Contract
                 </h3>
-                <p className="text-slate-600 mb-6 text-lg">Perfect for occasional contract reviews</p>
+                <p className="text-slate-600 mb-6 text-lg">One-time contract review</p>
                 <div className="text-5xl font-bold text-emerald mb-6 flex items-baseline">
                   Flat Fee
                   <span className="text-sm font-normal text-slate-500 ml-2">per contract</span>
@@ -351,7 +348,7 @@ export default function LegalEyesPage() {
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
                   Retainer
                 </h3>
-                <p className="text-slate-600 mb-6 text-lg">Monthly review package for regular needs</p>
+                <p className="text-slate-600 mb-6 text-lg">Monthly contract reviews</p>
                 <div className="text-5xl font-bold text-emerald mb-6 flex items-baseline">
                   Monthly
                   <span className="text-sm font-normal text-slate-500 ml-2">subscription</span>
@@ -367,10 +364,46 @@ export default function LegalEyesPage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
-                    <span className="text-lg">Face-to-face consultations</span>
+                    <span className="text-lg">Faster turnaround</span>
                   </li>
                 </ul>
                 <Button asChild className="w-full bg-gradient-emerald hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold animate-shimmer">
+                  <a href="#contact">Contact Sales</a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-gold/30 hover:border-gold/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-yellow-50/30 to-white relative overflow-hidden">
+              <div className="absolute top-4 right-4">
+                <Badge className="bg-gradient-gold text-white px-4 py-2 font-semibold">
+                  Pro
+                </Badge>
+              </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <CardContent className="pt-6 relative">
+                <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
+                  Retainer Pro
+                </h3>
+                <p className="text-slate-600 mb-6 text-lg">Everything in Retainer plus consultation</p>
+                <div className="text-5xl font-bold text-gold mb-6 flex items-baseline">
+                  Premium
+                  <span className="text-sm font-normal text-slate-500 ml-2">pricing</span>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-gold mr-3 flex-shrink-0" />
+                    <span className="text-lg">Everything in Retainer</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-gold mr-3 flex-shrink-0" />
+                    <span className="text-lg">1-on-1 consultation calls</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-gold mr-3 flex-shrink-0" />
+                    <span className="text-lg">Dedicated attorney</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full bg-gradient-gold hover:scale-105 shadow-xl hover:shadow-yellow-500/25 transition-all duration-300 text-lg py-6 font-semibold">
                   <a href="#contact">Contact Sales</a>
                 </Button>
               </CardContent>
