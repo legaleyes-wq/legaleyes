@@ -33,6 +33,7 @@ export default function IndividualContractPage() {
           <div className="text-xl font-semibold text-emerald">LegalEyes</div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="/" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Business</a>
+            <a href="#about" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">About</a>
             <a href="#how" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">How it works</a>
             <a href="#pricing" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Pricing</a>
             <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
@@ -143,7 +144,7 @@ export default function IndividualContractPage() {
                 <p className="text-slate-600 text-lg mb-4">
                   Lease agreements, rental contracts, property documents
                 </p>
-                <div className="text-2xl font-bold text-gold">₹299</div>
+                <div className="text-2xl font-bold text-gold">₹199</div>
               </CardContent>
             </Card>
 
@@ -158,7 +159,7 @@ export default function IndividualContractPage() {
                 <p className="text-slate-600 text-lg mb-4">
                   Freelance agreements, consulting contracts, service terms
                 </p>
-                <div className="text-2xl font-bold text-deep-blue">₹399</div>
+                <div className="text-2xl font-bold text-deep-blue">₹199</div>
               </CardContent>
             </Card>
 
@@ -173,7 +174,7 @@ export default function IndividualContractPage() {
                 <p className="text-slate-600 text-lg mb-4">
                   Personal loans, credit agreements, financial contracts
                 </p>
-                <div className="text-2xl font-bold text-emerald">₹499</div>
+                <div className="text-2xl font-bold text-emerald">₹199</div>
               </CardContent>
             </Card>
 
@@ -188,7 +189,7 @@ export default function IndividualContractPage() {
                 <p className="text-slate-600 text-lg mb-4">
                   Business partnerships, joint ventures, collaboration agreements
                 </p>
-                <div className="text-2xl font-bold text-gold">₹799</div>
+                <div className="text-2xl font-bold text-gold">₹199</div>
               </CardContent>
             </Card>
 
@@ -203,7 +204,7 @@ export default function IndividualContractPage() {
                 <p className="text-slate-600 text-lg mb-4">
                   Insurance policies, purchase agreements, any legal document
                 </p>
-                <div className="text-2xl font-bold text-deep-blue">₹299</div>
+                <div className="text-2xl font-bold text-deep-blue">₹199</div>
               </CardContent>
             </Card>
           </div>
@@ -393,7 +394,7 @@ export default function IndividualContractPage() {
                 </h3>
                 <p className="text-slate-600 mb-6 text-lg">Everything in Basic plus consultation</p>
                 <div className="text-5xl font-bold text-gold mb-6 flex items-baseline">
-                  ₹499
+                  ₹4999
                   <span className="text-sm font-normal text-slate-500 ml-2">per contract</span>
                 </div>
                 <ul className="space-y-4 mb-8">
@@ -561,6 +562,7 @@ export default function IndividualContractPage() {
             </div>
             <nav className="flex items-center gap-6 text-sm">
               <a href="/" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Business</a>
+              <a href="#about" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">About</a>
               <a href="#how" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">How it works</a>
               <a href="#pricing" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Pricing</a>
               <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
