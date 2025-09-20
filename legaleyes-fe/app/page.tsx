@@ -31,6 +31,7 @@ export default function LegalEyesPage() {
             <a href="#how" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">How it works</a>
             <a href="#pricing" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Pricing</a>
             <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
+            <a href="/employment" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Employment</a>
             <a href="#contact" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Contact</a>
           </nav>
           <div className="hidden md:block">
@@ -217,6 +218,26 @@ export default function LegalEyesPage() {
             </div>
           </div>
           <p className="text-center text-sm text-muted-foreground mt-10">NDA-first workflow. Secure storage. Confidential review.</p>
+        </div>
+      </BackgroundSignature>
+
+      {/* Stats Section */}
+      <BackgroundSignature className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="space-y-2">
+              <div className="text-4xl md:text-5xl font-bold text-emerald font-[family-name:var(--font-merriweather)]">5,000+</div>
+              <div className="text-lg text-slate-600">Contracts reviewed</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl md:text-5xl font-bold text-gold font-[family-name:var(--font-merriweather)]">17</div>
+              <div className="text-lg text-slate-600">Avg. critical issues flagged per review</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl md:text-5xl font-bold text-deep-blue font-[family-name:var(--font-merriweather)]">92%</div>
+              <div className="text-lg text-slate-600">Clients approve on first pass</div>
+            </div>
+          </div>
         </div>
       </BackgroundSignature>
 
@@ -628,6 +649,7 @@ export default function LegalEyesPage() {
               <a href="#how" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">How it works</a>
               <a href="#pricing" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Pricing</a>
               <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
+              <a href="/employment" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Employment</a>
               <a href="#contact" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Contact</a>
             </nav>
             <div className="text-sm text-muted-foreground">© 2025 LegalEyes</div>
