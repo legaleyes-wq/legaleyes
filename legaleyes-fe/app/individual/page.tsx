@@ -37,6 +37,7 @@ export default function IndividualContractPage() {
             <a href="#pricing" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Pricing</a>
             <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
             <a href="#contact" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Contact</a>
+            <a href="/legal" className="text-muted-foreground hover:text-emerald transition-colors">Legal</a>
           </nav>
           <div className="hidden md:block">
             <a href="#contact" className="inline-flex items-center rounded-md bg-emerald px-4 py-2 text-white text-sm font-medium hover:bg-emerald/90 transition-colors">Get Started</a>
@@ -732,6 +733,11 @@ export default function IndividualContractPage() {
               <a href="#pricing" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Pricing</a>
               <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
               <a href="#contact" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Contact</a>
+              <a href="/terms" className="text-muted-foreground hover:text-emerald transition-colors">Terms</a>
+              <a href="/privacy" className="text-muted-foreground hover:text-emerald transition-colors">Privacy</a>
+              <a href="/refunds" className="text-muted-foreground hover:text-emerald transition-colors">Refunds</a>
+              <a href="/service-delivery" className="text-muted-foreground hover:text-emerald transition-colors">Service Delivery</a>
+              <a href="/cookies" className="text-muted-foreground hover:text-emerald transition-colors">Cookies</a>
             </nav>
             <div className="text-sm text-muted-foreground">© 2025 LegalEyes</div>
           </div>
