@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Header } from "@/components/layout/header"
+import { Footer } from "@/components/layout/footer"
 import {
   Shield,
   Users,
@@ -21,28 +23,9 @@ import {
 export default function LegalEyesPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-background/80 backdrop-blur border-b border-border sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative">
-          <a href="/" className="text-xl font-semibold text-emerald hover:text-emerald/80 transition-colors">LegalEyes</a>
-            <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="/individual" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Individual</a>
-            <a href="#about" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">About</a>
-            <a href="#how" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">How it works</a>
-            <a href="#pricing" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Pricing</a>
-            <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
-            <a href="#contact" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Contact</a>
-              <a href="/terms" className="text-muted-foreground hover:text-emerald transition-colors">Terms</a>
-              <a href="/privacy" className="text-muted-foreground hover:text-emerald transition-colors">Privacy</a>
-          </nav>
-          <div className="hidden md:block">
-            <a href="#contact" className="inline-flex items-center rounded-md bg-emerald px-4 py-2 text-white text-sm font-medium hover:bg-emerald/90 transition-colors">Get Started</a>
-          </div>
-          {/* subtle blinking dot */}
-        </div>
-      </header>
+      <Header currentPage="business" />
       {/* Hero Section */}
-      <div className="bg-white" id="about">
+      <div className="bg-white scroll-mt-24" id="about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
           <div className="text-center">
             <div className="mb-8">
@@ -159,7 +142,7 @@ export default function LegalEyesPage() {
       </div>
 
       {/* How It Works Section */}
-      <div className="py-24 bg-white" id="how">
+      <div className="py-24 bg-white scroll-mt-24" id="how">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -305,7 +288,7 @@ export default function LegalEyesPage() {
       </div>
 
       {/* Pricing Section */}
-      <div className="py-24 bg-white" id="pricing">
+      <div className="py-24 bg-white scroll-mt-24" id="pricing">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
@@ -431,7 +414,7 @@ export default function LegalEyesPage() {
 
       {/* Testimonials Section */}
       <div className="py-24 bg-white" id="testimonials">
-        <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 pointer-events-none"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div aria-hidden className="pointer-events-none absolute -top-3 left-1/2 size-2 rounded-full bg-emerald/30"></div>
           <div aria-hidden className="pointer-events-none absolute -bottom-4 right-10 h-5 w-5 rotate-12 border border-emerald/20"></div>
@@ -626,26 +609,7 @@ export default function LegalEyesPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-card py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-left">
-              <h3 className="text-xl font-semibold text-emerald mb-1 font-[family-name:var(--font-merriweather)]">LegalEyes</h3>
-              <p className="text-muted-foreground text-sm">Contracts, made clear.</p>
-            </div>
-            <nav className="flex items-center gap-6 text-sm">
-              <a href="/individual" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Individual</a>
-              <a href="#about" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">About</a>
-              <a href="#how" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">How it works</a>
-              <a href="#pricing" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Pricing</a>
-              <a href="#faq" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">FAQ</a>
-              <a href="#contact" className="text-muted-foreground hover:text-emerald hover:underline underline-offset-4 decoration-emerald/70 transition-colors">Contact</a>
-              <a href="/legal" className="text-muted-foreground hover:text-emerald transition-colors">Legal</a>
-            </nav>
-            <div className="text-sm text-muted-foreground">© 2025 LegalEyes</div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
