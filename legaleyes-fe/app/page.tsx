@@ -9,7 +9,6 @@ import {
   Shield,
   Users,
   CheckCircle,
-  Upload,
   Eye,
   MessageSquare,
   Star,
@@ -17,7 +16,6 @@ import {
   Award,
   Clock,
   AlertTriangle,
-  Zap,
   FileText,
 } from "lucide-react"
 
@@ -41,18 +39,18 @@ export default function LegalEyesPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform text-white font-semibold">
+              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald hover:bg-emerald/90 text-white font-semibold">
                 <a href="#contact">
                   Start your review
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-semibold">
+              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white font-semibold">
                 <a href="#pricing">See pricing</a>
               </Button>
             </div>
             
             <div className="text-center mb-12">
-              <Button asChild variant="ghost" className="text-emerald hover:text-emerald/80 hover:bg-emerald/10 transition-all duration-300">
+              <Button asChild variant="ghost" className="text-emerald hover:text-emerald/80 hover:bg-emerald/10">
                 <a href="#sample-report">
                   View sample report
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -66,21 +64,21 @@ export default function LegalEyesPage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <Badge
                 variant="secondary"
-                className="px-6 py-3 bg-white border border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 font-medium"
+                className="px-6 py-3 bg-white border border-gold text-gold hover:bg-gold hover:text-white font-medium"
               >
                 <CheckCircle className="mr-2 h-4 w-4" />
                 Flat Pricing
               </Badge>
               <Badge
                 variant="secondary"
-                className="px-6 py-3 bg-white border border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-medium"
+                className="px-6 py-3 bg-white border border-emerald text-emerald hover:bg-emerald hover:text-white font-medium"
               >
                 <Shield className="mr-2 h-4 w-4" />
                 NDA-First Workflow
               </Badge>
               <Badge
                 variant="secondary"
-                className="px-6 py-3 bg-white border border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white transition-all duration-300 font-medium"
+                className="px-6 py-3 bg-white border border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white font-medium"
               >
                 <Clock className="mr-2 h-4 w-4" />
                 48h Turnaround
@@ -95,7 +93,7 @@ export default function LegalEyesPage() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 animate-fade-in-up">
+          <div className="text-center mb-12 ">
             <h2 className="text-3xl md:text-4xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">
               Here's exactly what you'll receive
             </h2>
@@ -177,7 +175,7 @@ export default function LegalEyesPage() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className="text-center mb-16 ">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               Why <span className="text-emerald">LegalEyes</span>
             </h2>
@@ -187,9 +185,9 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-200">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
-                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-emerald/30 bg-white hover:scale-110 transition-transform duration-300">
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-emerald/30 bg-white  ">
                   <Users className="h-8 w-8 text-emerald" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -201,9 +199,9 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-300">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50  hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
-                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-gold/30 bg-white hover:scale-110 transition-transform duration-300">
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-gold/30 bg-white  ">
                   <MessageSquare className="h-8 w-8 text-gold" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -215,9 +213,9 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-500">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50  hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
-                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-deep-blue/30 bg-white hover:scale-110 transition-transform duration-300">
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-deep-blue/30 bg-white  ">
                   <Eye className="h-8 w-8 text-deep-blue" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -294,7 +292,7 @@ export default function LegalEyesPage() {
       <div className="py-24 bg-gradient-to-br from-emerald-50/30 to-white scroll-mt-24 relative overflow-hidden" id="how">
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className="text-center mb-16 ">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               How It <span className="text-emerald">Works</span>
             </h2>
@@ -304,8 +302,8 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center relative animate-fade-in-up delay-200">
-              <div className="bg-gradient-emerald rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:scale-110 transition-transform duration-300">
+            <div className="text-center relative  ">
+              <div className="bg-gradient-emerald rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl  ">
                 <span className="text-3xl font-bold text-white">1</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -317,8 +315,8 @@ export default function LegalEyesPage() {
               <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-emerald/50 to-transparent animate-pulse"></div>
             </div>
 
-            <div className="text-center relative animate-fade-in-up delay-300">
-              <div className="bg-gradient-gold rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:scale-110 transition-transform duration-300">
+            <div className="text-center relative  ">
+              <div className="bg-gradient-gold rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl  ">
                 <span className="text-3xl font-bold text-white">2</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -331,8 +329,8 @@ export default function LegalEyesPage() {
               <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-gold/50 to-transparent animate-pulse"></div>
             </div>
 
-            <div className="text-center animate-fade-in-up delay-500">
-              <div className="bg-deep-blue rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:scale-110 transition-transform duration-300">
+            <div className="text-center  ">
+              <div className="bg-deep-blue rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl  ">
                 <span className="text-3xl font-bold text-white">3</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -356,16 +354,16 @@ export default function LegalEyesPage() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-2 animate-fade-in-up delay-200">
-              <div className="text-4xl md:text-5xl font-bold text-emerald font-[family-name:var(--font-merriweather)] hover:scale-110 transition-transform duration-300">5,000+</div>
+            <div className="space-y-2  ">
+              <div className="text-4xl md:text-5xl font-bold text-emerald font-[family-name:var(--font-merriweather)]  ">5,000+</div>
               <div className="text-lg text-slate-300">Contracts reviewed</div>
             </div>
-            <div className="space-y-2 animate-fade-in-up delay-300">
-              <div className="text-4xl md:text-5xl font-bold text-gold font-[family-name:var(--font-merriweather)] hover:scale-110 transition-transform duration-300">17</div>
+            <div className="space-y-2  ">
+              <div className="text-4xl md:text-5xl font-bold text-gold font-[family-name:var(--font-merriweather)]  ">17</div>
               <div className="text-lg text-slate-300">Avg. critical issues flagged per review</div>
             </div>
-            <div className="space-y-2 animate-fade-in-up delay-500">
-              <div className="text-4xl md:text-5xl font-bold text-deep-blue font-[family-name:var(--font-merriweather)] hover:scale-110 transition-transform duration-300">92%</div>
+            <div className="space-y-2  ">
+              <div className="text-4xl md:text-5xl font-bold text-deep-blue font-[family-name:var(--font-merriweather)]  ">92%</div>
               <div className="text-lg text-slate-300">Clients approve on first pass</div>
             </div>
           </div>
@@ -380,7 +378,7 @@ export default function LegalEyesPage() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className="text-center mb-16 ">
             <h2 className="text-4xl md:text-5xl font-bold text-emerald mb-6 font-[family-name:var(--font-merriweather)]">
               What Our Clients Say
             </h2>
@@ -390,18 +388,18 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br from-card to-background animate-fade-in-up delay-200">
+            <Card className="p-8 hover:shadow-xl  hover:-translate-y-2 bg-gradient-to-br from-card to-background  ">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold fill-current hover:scale-110 transition-transform duration-300" />
+                    <Star key={i} className="h-5 w-5 text-gold fill-current  " />
                   ))}
                 </div>
                 <blockquote className="text-lg mb-6 text-balance italic">
                   "All our contracts are vetted by LegalEyes. The comfort of dealing with a human for Legal work is priceless. It's like insurance, but smarter."
                 </blockquote>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3 hover:scale-110 transition-transform duration-300">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3  ">
                     <Award className="h-5 w-5 text-emerald" />
                   </div>
                   <div className="text-sm text-muted-foreground">Startup Founder</div>
@@ -409,18 +407,18 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br from-card to-background animate-fade-in-up delay-300">
+            <Card className="p-8 hover:shadow-xl  hover:-translate-y-2 bg-gradient-to-br from-card to-background  ">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold fill-current hover:scale-110 transition-transform duration-300" />
+                    <Star key={i} className="h-5 w-5 text-gold fill-current  " />
                   ))}
                 </div>
                 <blockquote className="text-lg mb-6 text-balance italic">
                   "This is like having your own in-house legal team on call, minus the cost."
                 </blockquote>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3 hover:scale-110 transition-transform duration-300">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3  ">
                     <Award className="h-5 w-5 text-emerald" />
                   </div>
                   <div className="text-sm text-muted-foreground">Business Owner</div>
@@ -428,18 +426,18 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br from-card to-background animate-fade-in-up delay-500">
+            <Card className="p-8 hover:shadow-xl  hover:-translate-y-2 bg-gradient-to-br from-card to-background  ">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold fill-current hover:scale-110 transition-transform duration-300" />
+                    <Star key={i} className="h-5 w-5 text-gold fill-current  " />
                   ))}
                 </div>
                 <blockquote className="text-lg mb-6 text-balance italic">
                   "As a tech startup, our priorities lie elsewhere. Outsourcing all legal to LegalEyes has saved us countless hours and exorbitant fees. Highly recommended for early-stage founders."
                 </blockquote>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3 hover:scale-110 transition-transform duration-300">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3  ">
                     <Award className="h-5 w-5 text-emerald" />
                   </div>
                   <div className="text-sm text-muted-foreground">Tech Startup CEO</div>
@@ -458,7 +456,7 @@ export default function LegalEyesPage() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className="text-center mb-16 ">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               <span className="text-emerald">Transparent</span> Pricing
             </h2>
@@ -468,7 +466,7 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col animate-fade-in-up delay-200">
+            <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50  hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col  ">
               <div className="absolute top-0 right-0 w-32 h-32 bg-deep-blue/10 rounded-full -translate-y-16 translate-x-16"></div>
               <CardContent className="pt-6 relative flex flex-col h-full">
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -493,13 +491,13 @@ export default function LegalEyesPage() {
                     <span className="text-lg">48-hour turnaround</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-emerald hover:bg-emerald/90 hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold mt-auto">
+                <Button asChild className="w-full bg-emerald hover:bg-emerald/90  shadow-xl hover:shadow-emerald-500/25  text-lg py-6 font-semibold mt-auto">
                   <a href="#contact">Start Review</a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col animate-fade-in-up delay-300">
+            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60  hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col  ">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-gradient-emerald text-white px-4 py-2 font-semibold">
                   Most Popular
@@ -529,13 +527,13 @@ export default function LegalEyesPage() {
                     <span className="text-lg">Faster turnaround</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-gradient-emerald hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold mt-auto">
+                <Button asChild className="w-full bg-gradient-emerald  shadow-xl hover:shadow-emerald-500/25  text-lg py-6 font-semibold mt-auto">
                   <a href="#contact">Contact Sales</a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-gold/30 hover:border-gold/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-yellow-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col animate-fade-in-up delay-500">
+            <Card className="p-8 border-2 border-gold/30 hover:border-gold/60  hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-yellow-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col  ">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-gradient-gold text-white px-4 py-2 font-semibold">
                   Pro
@@ -565,7 +563,7 @@ export default function LegalEyesPage() {
                     <span className="text-lg">Dedicated attorney</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-gradient-gold hover:scale-105 shadow-xl hover:shadow-yellow-500/25 transition-all duration-300 text-lg py-6 font-semibold mt-auto">
+                <Button asChild className="w-full bg-gradient-gold  shadow-xl hover:shadow-yellow-500/25  text-lg py-6 font-semibold mt-auto">
                   <a href="#contact">Contact Sales</a>
                 </Button>
               </CardContent>
@@ -589,7 +587,7 @@ export default function LegalEyesPage() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 animate-fade-in-up">
+          <div className="text-center mb-12 ">
             <h2 className="text-4xl md:text-5xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">Frequently Asked Questions</h2>
             <p className="text-muted-foreground">Straight answers to the most common questions.</p>
           </div>
@@ -642,7 +640,7 @@ export default function LegalEyesPage() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <div className="animate-fade-in-up">
+          <div className="">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance text-slate">
               Contracts you understand.
             </h2>
@@ -652,7 +650,7 @@ export default function LegalEyesPage() {
             <Button
               asChild
               size="lg"
-              className="text-xl px-10 py-6 bg-emerald text-white hover:bg-emerald/90 shadow-xl hover:shadow-emerald/20 transition-all duration-300 hover:scale-105 font-semibold"
+              className="text-xl px-10 py-6 bg-emerald text-white hover:bg-emerald/90 shadow-xl hover:shadow-emerald/20   font-semibold"
             >
               <a href="#contact">
                 Start your review
@@ -701,7 +699,7 @@ export default function LegalEyesPage() {
                     name="name"
                     required
                     className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors"
-                    placeholder="John Doe"
+                    placeholder="Your full name"
                   />
                 </div>
                 <div>
@@ -714,7 +712,7 @@ export default function LegalEyesPage() {
                     name="email"
                     required
                     className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors"
-                    placeholder="john@company.com"
+                    placeholder="your.email@domain.com"
                   />
                 </div>
               </div>
@@ -736,14 +734,14 @@ export default function LegalEyesPage() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   type="submit" 
-                  className="flex-1 bg-emerald hover:bg-emerald/90 text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="flex-1 bg-emerald hover:bg-emerald/90 text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl "
                 >
                   Send my contract for review
                 </Button>
                 <Button 
                   asChild
                   variant="outline"
-                  className="flex-1 border-2 border-emerald text-emerald hover:bg-emerald hover:text-white py-4 text-lg font-semibold rounded-lg transition-all duration-300"
+                  className="flex-1 border-2 border-emerald text-emerald hover:bg-emerald hover:text-white py-4 text-lg font-semibold rounded-lg "
                 >
                   <a href="#pricing">View pricing</a>
                 </Button>

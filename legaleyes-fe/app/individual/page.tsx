@@ -11,11 +11,6 @@ import {
   CheckCircle,
   Clock,
   ArrowRight,
-  Zap,
-  X,
-  Home,
-  Briefcase,
-  FileCheck,
   FileText,
   User,
   AlertTriangle,
@@ -42,18 +37,18 @@ export default function IndividualContractPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform text-white font-semibold">
+              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald  shadow-2xl hover:shadow-emerald-500/25  transform text-white font-semibold">
                 <a href="#contact">
                   Start your review
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-semibold">
+              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white  font-semibold">
                 <a href="#pricing">See pricing</a>
               </Button>
             </div>
             
             <div className="text-center mb-12">
-              <Button asChild variant="ghost" className="text-emerald hover:text-emerald/80 hover:bg-emerald/10 transition-all duration-300">
+              <Button asChild variant="ghost" className="text-emerald hover:text-emerald/80 hover:bg-emerald/10 ">
                 <a href="#sample-report">
                   View sample report
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -67,21 +62,21 @@ export default function IndividualContractPage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <Badge
                 variant="secondary"
-                className="px-6 py-3 bg-white border border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 font-medium"
+                className="px-6 py-3 bg-white border border-gold text-gold hover:bg-gold hover:text-white  font-medium"
               >
                 <CheckCircle className="mr-2 h-4 w-4" />
                 Flat Pricing
               </Badge>
               <Badge
                 variant="secondary"
-                className="px-6 py-3 bg-white border border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-medium"
+                className="px-6 py-3 bg-white border border-emerald text-emerald hover:bg-emerald hover:text-white  font-medium"
               >
                 <Shield className="mr-2 h-4 w-4" />
                 NDA-First Workflow
               </Badge>
               <Badge
                 variant="secondary"
-                className="px-6 py-3 bg-white border border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white transition-all duration-300 font-medium"
+                className="px-6 py-3 bg-white border border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white  font-medium"
               >
                 <Clock className="mr-2 h-4 w-4" />
                 48h Turnaround
@@ -95,7 +90,7 @@ export default function IndividualContractPage() {
       <div id="sample-report" className="py-16 bg-gradient-to-br from-gold-50/30 to-white relative overflow-hidden">
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 animate-fade-in-up">
+          <div className="text-center mb-12 ">
             <h2 className="text-3xl md:text-4xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">
               Here's exactly what you'll receive
             </h2>
@@ -174,9 +169,9 @@ export default function IndividualContractPage() {
       <div className="py-24 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className="text-center mb-16 ">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
-              Why You Need <span className="text-emerald">LegalEyes</span>
+              Why <span className="text-emerald">LegalEyes</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto text-balance">
               Personal contracts, employment agreements, and service contracts reviewed by lawyers who understand your needs.
@@ -184,9 +179,9 @@ export default function IndividualContractPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-200">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
-                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-emerald/30 bg-white hover:scale-110 transition-transform duration-300">
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-emerald/30 bg-white  ">
                   <User className="h-8 w-8 text-emerald" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -198,9 +193,9 @@ export default function IndividualContractPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-300">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50  hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
-                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-gold/30 bg-white hover:scale-110 transition-transform duration-300">
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-gold/30 bg-white  ">
                   <Shield className="h-8 w-8 text-gold" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -212,9 +207,9 @@ export default function IndividualContractPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-500">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50  hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
-                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-deep-blue/30 bg-white hover:scale-110 transition-transform duration-300">
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-deep-blue/30 bg-white  ">
                   <Clock className="h-8 w-8 text-deep-blue" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -291,7 +286,7 @@ export default function IndividualContractPage() {
       <div className="py-24 bg-gradient-to-br from-gold-50/30 to-white scroll-mt-24 relative overflow-hidden" id="how">
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className="text-center mb-16 ">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               How It <span className="text-emerald">Works</span>
             </h2>
@@ -301,8 +296,8 @@ export default function IndividualContractPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center relative animate-fade-in-up delay-200">
-              <div className="bg-gradient-emerald rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:scale-110 transition-transform duration-300">
+            <div className="text-center relative  ">
+              <div className="bg-gradient-emerald rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl  ">
                 <span className="text-3xl font-bold text-white">1</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -313,8 +308,8 @@ export default function IndividualContractPage() {
               </p>
             </div>
 
-            <div className="text-center relative animate-fade-in-up delay-300">
-              <div className="bg-gradient-gold rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:scale-110 transition-transform duration-300">
+            <div className="text-center relative  ">
+              <div className="bg-gradient-gold rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl  ">
                 <span className="text-3xl font-bold text-white">2</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -325,8 +320,8 @@ export default function IndividualContractPage() {
               </p>
             </div>
 
-            <div className="text-center animate-fade-in-up delay-500">
-              <div className="bg-deep-blue rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:scale-110 transition-transform duration-300">
+            <div className="text-center  ">
+              <div className="bg-deep-blue rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl  ">
                 <span className="text-3xl font-bold text-white">3</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -349,16 +344,16 @@ export default function IndividualContractPage() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-2 animate-fade-in-up delay-200">
-              <div className="text-4xl md:text-5xl font-bold text-emerald font-[family-name:var(--font-merriweather)] hover:scale-110 transition-transform duration-300">2,500+</div>
+            <div className="space-y-2  ">
+              <div className="text-4xl md:text-5xl font-bold text-emerald font-[family-name:var(--font-merriweather)]  ">2,500+</div>
               <div className="text-lg text-slate-300">Individual contracts reviewed</div>
             </div>
-            <div className="space-y-2 animate-fade-in-up delay-300">
-              <div className="text-4xl md:text-5xl font-bold text-gold font-[family-name:var(--font-merriweather)] hover:scale-110 transition-transform duration-300">24h</div>
+            <div className="space-y-2  ">
+              <div className="text-4xl md:text-5xl font-bold text-gold font-[family-name:var(--font-merriweather)]  ">24h</div>
               <div className="text-lg text-slate-300">Average turnaround time</div>
             </div>
-            <div className="space-y-2 animate-fade-in-up delay-500">
-              <div className="text-4xl md:text-5xl font-bold text-deep-blue font-[family-name:var(--font-merriweather)] hover:scale-110 transition-transform duration-300">99%</div>
+            <div className="space-y-2  ">
+              <div className="text-4xl md:text-5xl font-bold text-deep-blue font-[family-name:var(--font-merriweather)]  ">99%</div>
               <div className="text-lg text-slate-300">Clients feel more confident signing</div>
             </div>
           </div>
@@ -369,7 +364,7 @@ export default function IndividualContractPage() {
       <div className="py-24 bg-gradient-to-br from-gold-50/30 to-white relative overflow-hidden">
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className="text-center mb-16 ">
             <h2 className="text-4xl md:text-5xl font-bold text-emerald mb-6 font-[family-name:var(--font-merriweather)]">
               What Our Clients Say
             </h2>
@@ -379,12 +374,12 @@ export default function IndividualContractPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-200">
+            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   <div className="flex text-gold">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 fill-current hover:scale-110 transition-transform duration-300" viewBox="0 0 20 20">
+                      <svg key={i} className="w-5 h-5 fill-current  " viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
@@ -394,7 +389,7 @@ export default function IndividualContractPage() {
                   "I was about to sign a freelance contract that would have locked me into terrible terms. LegalEyes caught the red flags and saved me from a huge mistake. Worth every rupee!"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mr-4 hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mr-4  ">
                     <User className="h-6 w-6 text-emerald" />
                   </div>
                   <div>
@@ -405,12 +400,12 @@ export default function IndividualContractPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-300">
+            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   <div className="flex text-gold">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 fill-current hover:scale-110 transition-transform duration-300" viewBox="0 0 20 20">
+                      <svg key={i} className="w-5 h-5 fill-current  " viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
@@ -420,7 +415,7 @@ export default function IndividualContractPage() {
                   "The employment contract review was incredibly detailed. They explained every clause in simple terms and helped me negotiate better terms. Highly recommended!"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mr-4 hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mr-4  ">
                     <User className="h-6 w-6 text-emerald" />
                   </div>
                   <div>
@@ -431,12 +426,12 @@ export default function IndividualContractPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-500">
+            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   <div className="flex text-gold">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 fill-current hover:scale-110 transition-transform duration-300" viewBox="0 0 20 20">
+                      <svg key={i} className="w-5 h-5 fill-current  " viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
@@ -446,7 +441,7 @@ export default function IndividualContractPage() {
                   "I was nervous about my rental agreement, but LegalEyes made it so clear and easy to understand. The consultation call was the cherry on top - felt like having a lawyer friend!"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mr-4 hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mr-4  ">
                     <User className="h-6 w-6 text-emerald" />
                   </div>
                   <div>
@@ -464,7 +459,7 @@ export default function IndividualContractPage() {
       <div className="py-24 bg-gradient-to-br from-white to-slate-50 scroll-mt-24 relative overflow-hidden" id="pricing">
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className="text-center mb-16 ">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               <span className="text-emerald">Simple</span> Pricing
             </h2>
@@ -474,7 +469,7 @@ export default function IndividualContractPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
+            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
               <CardContent className="pt-6 relative flex flex-col h-full">
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
                   Basic Review
@@ -502,13 +497,13 @@ export default function IndividualContractPage() {
                     <span className="text-lg">24-hour turnaround</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-emerald hover:bg-emerald/90 hover:scale-105 shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 text-lg py-6 font-semibold mt-auto">
+                <Button asChild className="w-full bg-emerald hover:bg-emerald/90 hover:scale-105 shadow-xl hover:shadow-emerald-500/25  text-lg py-6 font-semibold mt-auto">
                   <a href="#contact">Get Started</a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
+            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60  hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-emerald text-white px-4 py-2 font-semibold">
                   Most Popular
@@ -541,7 +536,7 @@ export default function IndividualContractPage() {
                     <span className="text-lg">Priority support</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-gold hover:bg-gold/90 hover:scale-105 shadow-xl hover:shadow-gold-500/25 transition-all duration-300 text-lg py-6 font-semibold mt-auto">
+                <Button asChild className="w-full bg-gold hover:bg-gold/90 hover:scale-105 shadow-xl hover:shadow-gold-500/25  text-lg py-6 font-semibold mt-auto">
                   <a href="#contact">Get Started</a>
                 </Button>
               </CardContent>
@@ -659,7 +654,7 @@ export default function IndividualContractPage() {
                     name="name"
                     required
                     className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors"
-                    placeholder="John Doe"
+                    placeholder="Your full name"
                   />
                 </div>
                 <div>
@@ -672,7 +667,7 @@ export default function IndividualContractPage() {
                     name="email"
                     required
                     className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors"
-                    placeholder="john@company.com"
+                    placeholder="your.email@domain.com"
                   />
                 </div>
               </div>
@@ -694,14 +689,14 @@ export default function IndividualContractPage() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   type="submit" 
-                  className="flex-1 bg-emerald hover:bg-emerald/90 text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="flex-1 bg-emerald hover:bg-emerald/90 text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl "
                 >
                   Send my contract for review
                 </Button>
                 <Button 
                   asChild
                   variant="outline"
-                  className="flex-1 border-2 border-emerald text-emerald hover:bg-emerald hover:text-white py-4 text-lg font-semibold rounded-lg transition-all duration-300"
+                  className="flex-1 border-2 border-emerald text-emerald hover:bg-emerald hover:text-white py-4 text-lg font-semibold rounded-lg "
                 >
                   <a href="#pricing">View pricing</a>
                 </Button>
