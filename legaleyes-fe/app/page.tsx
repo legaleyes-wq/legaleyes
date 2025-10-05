@@ -18,6 +18,7 @@ import {
   Clock,
   AlertTriangle,
   Zap,
+  FileText,
 } from "lucide-react"
 
 export default function LegalEyesPage() {
@@ -29,11 +30,6 @@ export default function LegalEyesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
           <div className="text-center">
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 bg-gradient-emerald text-white px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg">
-                <AlertTriangle className="h-4 w-4" />
-                <span className="font-semibold">Trusted by 500+ businesses</span>
-                <Zap className="h-4 w-4" />
-              </div>
 
               <h1 className="text-6xl md:text-8xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)] text-balance tracking-tight">
                 Contracts, made <span className="text-emerald">clear</span>.
@@ -44,15 +40,27 @@ export default function LegalEyesPage() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform text-white font-semibold">
                 <a href="#contact">
                   Start your review
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white transition-all duration-300 font-semibold">
-                <a href="#pricing">See Pricing</a>
+                <a href="#pricing">See pricing</a>
               </Button>
+            </div>
+            
+            <div className="text-center mb-12">
+              <Button asChild variant="ghost" className="text-emerald hover:text-emerald/80 hover:bg-emerald/10 transition-all duration-300">
+                <a href="#sample-report">
+                  View sample report
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <p className="text-sm text-slate-500 mt-2">
+                See exactly what you'll receive: detailed analysis + plain-English summary
+              </p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm">
@@ -82,11 +90,94 @@ export default function LegalEyesPage() {
         </div>
       </div>
 
-      {/* Why LegalEyes Section */}
-      <div className="py-24 bg-white">
+      {/* Sample Report Section */}
+      <div id="sample-report" className="py-16 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">
+              Here's exactly what you'll receive
+            </h2>
+            <p className="text-lg text-slate-600">
+              A comprehensive Word document with detailed analysis and actionable insights
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-emerald/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="h-5 w-5 text-emerald" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate mb-2">Executive Summary</h3>
+                  <p className="text-slate-600 text-sm">Plain-English overview of key risks and opportunities</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-emerald/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="h-5 w-5 text-emerald" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate mb-2">Clause-by-Clause Analysis</h3>
+                  <p className="text-slate-600 text-sm">Detailed breakdown of each important section</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-emerald/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="h-5 w-5 text-emerald" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate mb-2">Red Flags & Recommendations</h3>
+                  <p className="text-slate-600 text-sm">Specific issues to address and suggested changes</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg border-2 border-slate-200 p-6 shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-emerald/10 rounded-full flex items-center justify-center">
+                  <FileText className="h-4 w-4 text-emerald" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate">Sample Report</h4>
+                  <p className="text-sm text-slate-500">Employment Contract Review</p>
+                </div>
+              </div>
+              <div className="space-y-3 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-slate-600">Pages:</span>
+                  <span className="font-medium">8-12 pages</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-600">Format:</span>
+                  <span className="font-medium">Microsoft Word</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-600">Turnaround:</span>
+                  <span className="font-medium">24-48 hours</span>
+                </div>
+              </div>
+              <Button asChild className="w-full mt-4 bg-emerald hover:bg-emerald/90">
+                <a href="#contact">Get your report</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Why LegalEyes Section */}
+      <div className="py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald/5 rounded-full -translate-y-48 translate-x-48"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full translate-y-40 -translate-x-40"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               Why <span className="text-emerald">LegalEyes</span>
             </h2>
@@ -96,9 +187,9 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-200">
               <CardContent className="pt-6">
-                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-emerald/30 bg-white">
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-emerald/30 bg-white hover:scale-110 transition-transform duration-300">
                   <Users className="h-8 w-8 text-emerald" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -110,9 +201,9 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-300">
               <CardContent className="pt-6">
-                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-gold/30 bg-white">
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-gold/30 bg-white hover:scale-110 transition-transform duration-300">
                   <MessageSquare className="h-8 w-8 text-gold" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -124,9 +215,9 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white">
+            <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white animate-fade-in-up delay-500">
               <CardContent className="pt-6">
-                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-deep-blue/30 bg-white">
+                <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-deep-blue/30 bg-white hover:scale-110 transition-transform duration-300">
                   <Eye className="h-8 w-8 text-deep-blue" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -141,10 +232,69 @@ export default function LegalEyesPage() {
         </div>
       </div>
 
+      {/* Smart Investment Section */}
+      <div className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
+              Don't get <span className="text-red-500">locked in</span> to bad terms
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              A small investment now can save you thousands in legal fees, penalties, and business disruption later.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                  <AlertTriangle className="h-6 w-6 text-red-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-slate mb-2">The Cost of Not Reviewing</h3>
+                  <p className="text-slate-600">Hidden fees, unfair terms, and legal disputes that could have been avoided</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                  <CheckCircle className="h-6 w-6 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-slate mb-2">The Value of Review</h3>
+                  <p className="text-slate-600">Peace of mind, fair terms, and protection from future legal headaches</p>
+                </div>
+              </div>
+              <div className="bg-gradient-to-r from-emerald-50 to-gold-50 rounded-xl p-6 border border-emerald-200">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-emerald mb-2">₹999 vs ₹1,00,000+</div>
+                  <p className="text-slate-600">Small review cost vs potential legal fees and business disruption</p>
+                </div>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 border border-slate-200">
+                <div className="w-20 h-20 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Shield className="h-10 w-10 text-emerald" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate mb-4">Smart Protection</h3>
+                <p className="text-lg text-slate-600 mb-6">
+                  <span className="font-semibold">Review before you sign.</span> Once you're locked in, it's much harder and more expensive to fix problems.
+                </p>
+                <div className="bg-emerald text-white rounded-xl p-4">
+                  <div className="text-lg font-bold">Smart investment in your future</div>
+                  <p className="text-emerald-100 text-sm mt-1">Professional review by experienced lawyers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* How It Works Section */}
-      <div className="py-24 bg-white scroll-mt-24" id="how">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <div className="py-24 bg-gradient-to-br from-emerald-50/30 to-white scroll-mt-24 relative overflow-hidden" id="how">
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+          <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               How It <span className="text-emerald">Works</span>
             </h2>
@@ -154,8 +304,8 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center relative">
-              <div className="bg-gradient-emerald rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl">
+            <div className="text-center relative animate-fade-in-up delay-200">
+              <div className="bg-gradient-emerald rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:scale-110 transition-transform duration-300">
                 <span className="text-3xl font-bold text-white">1</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -164,11 +314,11 @@ export default function LegalEyesPage() {
               <p className="text-slate-600 text-lg">
                 Share your contract securely. We'll send an NDA and upload link after you contact us.
               </p>
-              <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-emerald/50 to-transparent"></div>
+              <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-emerald/50 to-transparent animate-pulse"></div>
             </div>
 
-            <div className="text-center relative">
-              <div className="bg-gradient-gold rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl">
+            <div className="text-center relative animate-fade-in-up delay-300">
+              <div className="bg-gradient-gold rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:scale-110 transition-transform duration-300">
                 <span className="text-3xl font-bold text-white">2</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -178,11 +328,11 @@ export default function LegalEyesPage() {
                 <span className="text-gold font-semibold">Experienced lawyers</span> review, redline, and identify key
                 risks and opportunities.
               </p>
-              <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-gold/50 to-transparent"></div>
+              <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-gold/50 to-transparent animate-pulse"></div>
             </div>
 
-            <div className="text-center">
-              <div className="bg-deep-blue rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl">
+            <div className="text-center animate-fade-in-up delay-500">
+              <div className="bg-deep-blue rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-2xl hover:scale-110 transition-transform duration-300">
                 <span className="text-3xl font-bold text-white">3</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -198,47 +348,60 @@ export default function LegalEyesPage() {
       </div>
 
       {/* Stats Section */}
-      <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-16 bg-gradient-to-r from-slate-900 to-slate-800 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 left-0 w-80 h-80 bg-emerald/5 rounded-full -translate-y-40 -translate-x-40"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/5 rounded-full translate-y-48 translate-x-48"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold text-emerald font-[family-name:var(--font-merriweather)]">5,000+</div>
-              <div className="text-lg text-slate-600">Contracts reviewed</div>
+            <div className="space-y-2 animate-fade-in-up delay-200">
+              <div className="text-4xl md:text-5xl font-bold text-emerald font-[family-name:var(--font-merriweather)] hover:scale-110 transition-transform duration-300">5,000+</div>
+              <div className="text-lg text-slate-300">Contracts reviewed</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold text-gold font-[family-name:var(--font-merriweather)]">17</div>
-              <div className="text-lg text-slate-600">Avg. critical issues flagged per review</div>
+            <div className="space-y-2 animate-fade-in-up delay-300">
+              <div className="text-4xl md:text-5xl font-bold text-gold font-[family-name:var(--font-merriweather)] hover:scale-110 transition-transform duration-300">17</div>
+              <div className="text-lg text-slate-300">Avg. critical issues flagged per review</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold text-deep-blue font-[family-name:var(--font-merriweather)]">92%</div>
-              <div className="text-lg text-slate-600">Clients approve on first pass</div>
+            <div className="space-y-2 animate-fade-in-up delay-500">
+              <div className="text-4xl md:text-5xl font-bold text-deep-blue font-[family-name:var(--font-merriweather)] hover:scale-110 transition-transform duration-300">92%</div>
+              <div className="text-lg text-slate-300">Clients approve on first pass</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Testimonials Section (moved before pricing for trust) */}
-      <div className="py-24 bg-white" id="testimonials">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <div className="py-24 bg-gradient-to-br from-gold-50/30 to-white relative overflow-hidden" id="testimonials">
+        {/* Background decoration */}
+        <div className="absolute top-0 left-0 w-80 h-80 bg-gold/5 rounded-full -translate-y-40 -translate-x-40"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald/5 rounded-full translate-y-48 translate-x-48"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+          <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-emerald mb-6 font-[family-name:var(--font-merriweather)]">
               What Our Clients Say
             </h2>
+            <p className="text-xl text-slate max-w-2xl mx-auto">
+              Real people, real results. See how LegalEyes has helped businesses protect themselves.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
+            <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br from-card to-background animate-fade-in-up delay-200">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                    <Star key={i} className="h-5 w-5 text-gold fill-current hover:scale-110 transition-transform duration-300" />
                   ))}
                 </div>
                 <blockquote className="text-lg mb-6 text-balance italic">
                   "All our contracts are vetted by LegalEyes. The comfort of dealing with a human for Legal work is priceless. It's like insurance, but smarter."
                 </blockquote>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3 hover:scale-110 transition-transform duration-300">
                     <Award className="h-5 w-5 text-emerald" />
                   </div>
                   <div className="text-sm text-muted-foreground">Startup Founder</div>
@@ -246,18 +409,18 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
+            <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br from-card to-background animate-fade-in-up delay-300">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                    <Star key={i} className="h-5 w-5 text-gold fill-current hover:scale-110 transition-transform duration-300" />
                   ))}
                 </div>
                 <blockquote className="text-lg mb-6 text-balance italic">
                   "This is like having your own in-house legal team on call, minus the cost."
                 </blockquote>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3 hover:scale-110 transition-transform duration-300">
                     <Award className="h-5 w-5 text-emerald" />
                   </div>
                   <div className="text-sm text-muted-foreground">Business Owner</div>
@@ -265,18 +428,18 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
+            <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br from-card to-background animate-fade-in-up delay-500">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                    <Star key={i} className="h-5 w-5 text-gold fill-current hover:scale-110 transition-transform duration-300" />
                   ))}
                 </div>
                 <blockquote className="text-lg mb-6 text-balance italic">
                   "As a tech startup, our priorities lie elsewhere. Outsourcing all legal to LegalEyes has saved us countless hours and exorbitant fees. Highly recommended for early-stage founders."
                 </blockquote>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3 hover:scale-110 transition-transform duration-300">
                     <Award className="h-5 w-5 text-emerald" />
                   </div>
                   <div className="text-sm text-muted-foreground">Tech Startup CEO</div>
@@ -288,9 +451,14 @@ export default function LegalEyesPage() {
       </div>
 
       {/* Pricing Section */}
-      <div className="py-24 bg-white scroll-mt-24" id="pricing">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <div className="py-24 bg-gradient-to-br from-white to-slate-50 scroll-mt-24 relative overflow-hidden" id="pricing">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald/5 rounded-full -translate-y-40 translate-x-40"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full translate-y-48 -translate-x-48"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
               <span className="text-emerald">Transparent</span> Pricing
             </h2>
@@ -300,7 +468,7 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
+            <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col animate-fade-in-up delay-200">
               <div className="absolute top-0 right-0 w-32 h-32 bg-deep-blue/10 rounded-full -translate-y-16 translate-x-16"></div>
               <CardContent className="pt-6 relative flex flex-col h-full">
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
@@ -331,7 +499,7 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
+            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col animate-fade-in-up delay-300">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-gradient-emerald text-white px-4 py-2 font-semibold">
                   Most Popular
@@ -367,7 +535,7 @@ export default function LegalEyesPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-gold/30 hover:border-gold/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-yellow-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
+            <Card className="p-8 border-2 border-gold/30 hover:border-gold/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-yellow-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col animate-fade-in-up delay-500">
               <div className="absolute top-4 right-4">
                 <Badge className="bg-gradient-gold text-white px-4 py-2 font-semibold">
                   Pro
@@ -405,91 +573,23 @@ export default function LegalEyesPage() {
           </div>
 
           <div className="text-center mt-8">
-            <p className="text-slate-600">
-              Transparent pricing available in <span className="text-gold font-semibold">INR and USD</span>
+            <p className="text-slate">
+              <span className="text-emerald font-semibold">Pay once, review once</span> - no subscriptions, no hidden fees
             </p>
           </div>
         </div>
       </div>
 
-      {/* Testimonials Section */}
-      <div className="py-24 bg-white" id="testimonials">
-        <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 pointer-events-none"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div aria-hidden className="pointer-events-none absolute -top-3 left-1/2 size-2 rounded-full bg-emerald/30"></div>
-          <div aria-hidden className="pointer-events-none absolute -bottom-4 right-10 h-5 w-5 rotate-12 border border-emerald/20"></div>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-emerald mb-6 font-[family-name:var(--font-merriweather)]">
-              What Our Clients Say
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-lg mb-6 text-balance italic">
-                  "All our contracts are vetted by LegalEyes. The comfort of dealing with a human for Legal work is priceless. It's like insurance, but smarter."
-                </blockquote>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
-                    <Award className="h-5 w-5 text-emerald" />
-                  </div>
-                  <div className="text-sm text-muted-foreground">Startup Founder</div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-lg mb-6 text-balance italic">
-                  "This is like having your own in-house legal team on call, minus the cost."
-                </blockquote>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
-                    <Award className="h-5 w-5 text-emerald" />
-                  </div>
-                  <div className="text-sm text-muted-foreground">Business Owner</div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-card to-background">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-lg mb-6 text-balance italic">
-                  "As a tech startup, our priorities lie elsewhere. Outsourcing all legal to LegalEyes has saved us
-                  countless hours and exorbitant fees. Highly recommended for early-stage founders."
-                </blockquote>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3">
-                    <Award className="h-5 w-5 text-emerald" />
-                  </div>
-                  <div className="text-sm text-muted-foreground">Tech Startup CEO</div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </div>
 
       {/* FAQ Section */}
-      <div id="faq" className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <div id="faq" className="py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-emerald/5 rounded-full -translate-y-48 -translate-x-48"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gold/5 rounded-full translate-y-40 translate-x-40"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">Frequently Asked Questions</h2>
             <p className="text-muted-foreground">Straight answers to the most common questions.</p>
           </div>
@@ -535,76 +635,122 @@ export default function LegalEyesPage() {
       </div>
 
       {/* Closing CTA Section */}
-      <div className="py-24 bg-white">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance text-slate">
-            Contracts you understand.
-          </h2>
-          <p className="text-xl mb-8 text-slate-600 max-w-2xl mx-auto text-balance">
-            Contracts vetted by humans you can speak to.
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="text-xl px-10 py-6 bg-emerald text-white hover:bg-emerald/90 shadow-xl hover:shadow-emerald/20 transition-colors font-semibold"
-          >
-            <a href="#contact">
-              Start your review
-              <ArrowRight className="ml-2 h-6 w-6" />
-            </a>
-          </Button>
+      <div className="py-24 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald/5 rounded-full -translate-y-48 translate-x-48"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full translate-y-40 -translate-x-40"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <div className="animate-fade-in-up">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance text-slate">
+              Contracts you understand.
+            </h2>
+            <p className="text-xl mb-8 text-slate-600 max-w-2xl mx-auto text-balance">
+              Contracts vetted by humans you can speak to.
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="text-xl px-10 py-6 bg-emerald text-white hover:bg-emerald/90 shadow-xl hover:shadow-emerald/20 transition-all duration-300 hover:scale-105 font-semibold"
+            >
+              <a href="#contact">
+                Start your review
+                <ArrowRight className="ml-2 h-6 w-6" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
 
-      {/* Prominent Contact Section */}
-      <div id="contact" className="py-24 bg-white">
+      {/* Contact Section */}
+      <div id="contact" className="py-24 bg-gradient-to-br from-slate-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-[family-name:var(--font-merriweather)] text-emerald">Get in touch</h2>
-            <p className="text-lg text-muted-foreground">Let's get started</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-slate">
+              Ready to get started?
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Send us your contract details and we'll get back to you quickly with a detailed review.
+            </p>
           </div>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault()
-              const form = e.currentTarget as HTMLFormElement
-              const formData = new FormData(form)
-              const name = String(formData.get('name') || '')
-              const email = String(formData.get('email') || '')
-              const message = String(formData.get('message') || '')
-              const subject = encodeURIComponent(`Inquiry from ${name}`)
-              const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
-              window.location.href = `mailto:hello@legaleyes.com?subject=${subject}&body=${body}`
-            }}
-            className="max-w-2xl mx-auto grid gap-4"
-          >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Your name"
-                className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              />
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="you@example.com"
-                className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              />
-            </div>
-            <textarea
-              name="message"
-              required
-              rows={5}
-              placeholder="Tell us briefly about your contract or question"
-              className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            />
-            <div className="flex items-center gap-4 justify-center">
-              <Button type="submit" className="bg-emerald text-white hover:bg-emerald/90">Get Started</Button>
-              <a href="#pricing" className="px-6 py-3 rounded-md border border-emerald text-emerald hover:bg-emerald/10 transition-colors">View pricing</a>
-            </div>
-          </form>
+          
+          <div className="bg-white rounded-2xl shadow-xl border border-slate-200 p-8 md:p-12">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                const form = e.currentTarget as HTMLFormElement
+                const formData = new FormData(form)
+                const name = String(formData.get('name') || '')
+                const email = String(formData.get('email') || '')
+                const message = String(formData.get('message') || '')
+                const subject = encodeURIComponent(`Contract Review Inquiry from ${name}`)
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nContract Details:\n${message}`)
+                window.location.href = `mailto:hello@legaleyes.com?subject=${subject}&body=${body}`
+              }}
+              className="space-y-6"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                    Your name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                    Email address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors"
+                    placeholder="john@company.com"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                  Tell us about your contract
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={6}
+                  className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors resize-none"
+                  placeholder="Please describe your contract type (employment, vendor, rental, etc.), any specific concerns you have, and your preferred timeline for the review."
+                />
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button 
+                  type="submit" 
+                  className="flex-1 bg-emerald hover:bg-emerald/90 text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  Send my contract for review
+                </Button>
+                <Button 
+                  asChild
+                  variant="outline"
+                  className="flex-1 border-2 border-emerald text-emerald hover:bg-emerald hover:text-white py-4 text-lg font-semibold rounded-lg transition-all duration-300"
+                >
+                  <a href="#pricing">View pricing</a>
+                </Button>
+              </div>
+              
+            </form>
+          </div>
         </div>
       </div>
 
