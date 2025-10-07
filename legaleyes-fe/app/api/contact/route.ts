@@ -41,42 +41,32 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if email service is configured
+    // Require ALL env vars (no defaults). If any are missing -> 503 with details
     const EMAIL_API_KEY = process.env.BREVO_API_KEY
-    console.log('Contact API: EMAIL_API_KEY exists:', !!EMAIL_API_KEY)
-    
-    if (!EMAIL_API_KEY) {
-      console.log('Contact API: No EMAIL_API_KEY configured')
-      return NextResponse.json(
-        { error: 'Contact form is not configured yet. Please try again later.' },
-        { status: 503 }
-      )
-    }
+    const notificationEmail = process.env.BREVO_TO_EMAIL
+    const senderEmail = process.env.BREVO_SENDER_EMAIL
+    const senderName = process.env.BREVO_SENDER_NAME
+    const subjectLine = process.env.EMAIL_SUBJECT_LINE
 
-    // Send email notification
-    const notificationEmail = process.env.BREVO_TO_EMAIL || "contact@legaleyes.co"
-    const senderEmail = process.env.BREVO_SENDER_EMAIL || notificationEmail
-    
-    if (!notificationEmail) {
-      console.log('Contact API: No NOTIFICATION_EMAIL configured')
+    const missing: string[] = []
+    if (!EMAIL_API_KEY) missing.push('BREVO_API_KEY')
+    if (!notificationEmail) missing.push('BREVO_TO_EMAIL')
+    if (!senderEmail) missing.push('BREVO_SENDER_EMAIL')
+    if (!senderName) missing.push('BREVO_SENDER_NAME')
+    if (!subjectLine) missing.push('EMAIL_SUBJECT_LINE')
+    // Only the five original keys are required; others are optional
+    console.log('Contact API: env check missing=', missing)
+    if (missing.length > 0) {
       return NextResponse.json(
-        { error: 'Contact form is not configured yet. Please try again later.' },
-        { status: 503 }
-      )
-    }
-    
-    if (!senderEmail) {
-      console.log('Contact API: No SENDER_EMAIL configured')
-      return NextResponse.json(
-        { error: 'Contact form is not configured yet. Please try again later.' },
+        { error: 'Server not configured', missing },
         { status: 503 }
       )
     }
 
     const servicePrefix = body.serviceType === "business" ? "[B]" : "[I]"
-    const subject = `${servicePrefix} ${process.env.EMAIL_SUBJECT_LINE || 'Contract Review Request From'} ${body.name}`
+    const subject = `${servicePrefix} ${subjectLine} ${body.name}`
     
-    const textContent = `${process.env.EMAIL_TEXT_PREFIX || 'New Contract Review Request'}
+    const textContent = `New Contract Review Request
 
 Name: ${body.name}
 Email: ${body.email}
@@ -86,7 +76,7 @@ Service Type: ${body.serviceType === "business" ? "Business" : "Individual"}
 Message:
 ${body.message}
 
-Sent from: ${process.env.WEBSITE_NAME || 'LegalEyes'} contact form
+Sent from: LegalEyes contact form
 Time: ${new Date().toLocaleString()}
 Message ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
 
@@ -101,7 +91,7 @@ Message ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
       <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
         <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
           <h1 style="color: #000; margin: 0 0 20px 0; font-size: 24px; border-bottom: 3px solid #000; padding-bottom: 10px;">
-            ${process.env.EMAIL_HEADING || 'New Contract Review Request'}
+            New Contract Review Request
           </h1>
           
           <div style="background: #f8f9fa; padding: 20px; border-left: 4px solid #000; margin: 20px 0; border-radius: 4px;">
@@ -117,7 +107,7 @@ Message ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
           </div>
           
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e0e0e0; font-size: 14px; color: #666;">
-            <p style="margin: 5px 0;"><strong>Sent from:</strong> ${process.env.WEBSITE_NAME || 'LegalEyes'} contact form</p>
+            <p style="margin: 5px 0;"><strong>Sent from:</strong> LegalEyes contact form</p>
             <p style="margin: 5px 0;"><strong>Time:</strong> ${new Date().toLocaleString()}</p>
             <p style="margin: 5px 0;"><strong>Message ID:</strong> ${Date.now()}-${Math.random().toString(36).substr(2, 9)}</p>
           </div>
@@ -139,10 +129,10 @@ Message ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
       },
       body: JSON.stringify({
         sender: {
-          name: process.env.BREVO_SENDER_NAME || 'LegalEyes',
-          email: senderEmail,
+          name: senderName!,
+          email: senderEmail!,
         },
-        to: [{ email: notificationEmail, name: process.env.RECIPIENT_NAME || 'LegalEyes Admin' }],
+        to: [{ email: notificationEmail!, name: 'Admin' }],
         replyTo: {
           email: body.email,
           name: body.name,

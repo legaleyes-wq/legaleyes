@@ -41,7 +41,7 @@ export default function LandingPage() {
                 <div className="flex items-center justify-center gap-3 mb-3">
                   <div className="w-8 h-8 bg-emerald rounded-full flex items-center justify-center">
                     <span className="text-white text-sm font-bold">✓</span>
-                  </div>
+                </div>
                   <h3 className="text-lg font-semibold text-slate">Human Expertise, Not AI</h3>
                 </div>
                 <p className="text-slate-600 text-center">
@@ -50,7 +50,7 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-
+            
             {/* Service Selection Cards */}
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
               {/* Business Card */}
@@ -58,7 +58,7 @@ export default function LandingPage() {
                 <CardContent className="p-8 text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-slate-900 to-slate-700 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
                     <Building2 className="h-10 w-10 text-white" />
-                  </div>
+                </div>
                   <h3 className="text-2xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">
                     Business Services
                   </h3>
@@ -69,34 +69,34 @@ export default function LandingPage() {
                     <div className="flex items-center justify-center gap-2 bg-slate-100 rounded-full px-3 py-2">
                       <CheckCircle className="h-4 w-4 text-slate-600" />
                       <span className="text-slate-700 font-medium">Strategic legal counsel</span>
-                    </div>
+                </div>
                     <div className="flex items-center justify-center gap-2 bg-slate-100 rounded-full px-3 py-2">
                       <CheckCircle className="h-4 w-4 text-slate-600" />
                       <span className="text-slate-700 font-medium">Volume discounts & retainers</span>
-                    </div>
+              </div>
                     <div className="flex items-center justify-center gap-2 bg-slate-100 rounded-full px-3 py-2">
                       <CheckCircle className="h-4 w-4 text-slate-600" />
                       <span className="text-slate-700 font-medium">Enterprise-grade security</span>
-                    </div>
-                  </div>
+                </div>
+              </div>
                   <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold shadow-lg">
                     <a href="/business">
                       Choose Business
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              </Button>
+              </CardContent>
+            </Card>
 
               {/* Individual Card */}
               <Card className="group cursor-pointer hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-2 hover:border-emerald-300 bg-gradient-to-br from-emerald-50 to-white">
                 <CardContent className="p-8 text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
                     <User className="h-10 w-10 text-white" />
-                  </div>
+                </div>
                   <h3 className="text-2xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">
                     Individual Services
-                  </h3>
+                </h3>
                   <p className="text-slate-600 mb-6 text-lg">
                     Personal contracts, employment agreements, and life decisions reviewed by <span className="font-semibold text-emerald-700">friendly legal experts</span> who speak your language.
                   </p>
@@ -113,16 +113,16 @@ export default function LandingPage() {
                       <CheckCircle className="h-4 w-4 text-emerald-600" />
                       <span className="text-emerald-700 font-medium">Simple, affordable pricing</span>
                     </div>
-                  </div>
+                </div>
                   <Button asChild className="w-full bg-emerald hover:bg-emerald/90 text-white font-semibold shadow-lg">
                     <a href="/individual">
                       Choose Individual
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
-                </CardContent>
-              </Card>
-            </div>
+              </CardContent>
+            </Card>
+      </div>
 
             {/* Trust Indicators */}
             <div className="flex flex-wrap justify-center gap-6 text-sm">
@@ -148,7 +148,7 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
             Why <span className="text-emerald">LegalEyes</span>
-          </h2>
+            </h2>
           <p className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto">
             In a world of AI and automated legal tools, we believe in the irreplaceable value of <span className="font-semibold text-emerald">human judgment, experience, and empathy</span>.
           </p>
@@ -204,7 +204,7 @@ export default function LandingPage() {
                   <li>• Trusted relationship and accountability</li>
                 </ul>
               </div>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -214,7 +214,7 @@ export default function LandingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
             Ready to get started?
-          </h2>
+            </h2>
           <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
             Choose the service that's right for you and get your contract reviewed by experienced lawyers.
           </p>
