@@ -78,14 +78,16 @@ export function ContactForm({
           serviceType
         })
       } else {
-        // Fallback to mailto
-        const mailtoLink = createMailtoLink(formData)
-        window.location.href = mailtoLink
+        setSubmitStatus({
+          type: 'error',
+          message: 'Unable to send right now. Please try again in a minute.'
+        })
       }
     } catch (error) {
-      // Fallback to mailto if EmailJS fails
-      const mailtoLink = createMailtoLink(formData)
-      window.location.href = mailtoLink
+      setSubmitStatus({
+        type: 'error',
+        message: 'Unable to send right now. Please try again in a minute.'
+      })
     } finally {
       setIsSubmitting(false)
     }

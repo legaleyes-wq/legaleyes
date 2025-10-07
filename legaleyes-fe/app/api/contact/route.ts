@@ -1,5 +1,4 @@
-import { NextResponse } from "next/server"
-import nodemailer from "nodemailer"
+import { NextRequest, NextResponse } from 'next/server'
 
 type ServiceType = "business" | "individual"
 
@@ -12,97 +11,179 @@ interface ContactBody {
   serviceType: ServiceType
 }
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
+  console.log('Contact API: Request received')
+  
   try {
-    const apiKey = process.env.BREVO_API_KEY
-    const toEmail = process.env.BREVO_TO_EMAIL || "contact@legaleyes.co"
-    const senderEmail = process.env.BREVO_SENDER_EMAIL || toEmail
-    const senderName = process.env.BREVO_SENDER_NAME || "LegalEyes"
-    const allowExternalFrom = process.env.BREVO_ALLOW_EXTERNAL_FROM === "true"
-    const subjectTemplate = process.env.EMAIL_SUBJECT_LINE || "Contract Review Request From"
-
-    console.log("API Key exists:", !!apiKey)
-    console.log("To Email:", toEmail)
-    console.log("Sender Email:", senderEmail)
-
-    if (!apiKey) {
-      return NextResponse.json(
-        { error: "Server email is not configured" },
-        { status: 500 }
-      )
-    }
-
     const body = (await request.json()) as Partial<ContactBody>
+    console.log('Contact API: Parsed request data:', { 
+      name: body.name, 
+      email: body.email, 
+      serviceType: body.serviceType,
+      messageLength: body.message?.length 
+    })
 
-    // Basic validation
+    // Validation
     if (!body.name || !body.email || !body.message || !body.serviceType) {
+      console.log('Contact API: Validation failed - missing fields')
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { error: 'Missing required fields' },
         { status: 400 }
       )
     }
 
-    const servicePrefix = body.serviceType === "business" ? "[B]" : "[I]"
-    const subject = `${servicePrefix} ${subjectTemplate} ${body.name}`
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(body.email)) {
+      return NextResponse.json(
+        { error: 'Invalid email format' },
+        { status: 400 }
+      )
+    }
 
-    // Create SMTP transporter for Brevo
-    const smtpHost = process.env.SMTP_Server || 'smtp-relay.brevo.com'
-    const smtpPort = parseInt(process.env.SMTP_PORT || '587')
-    const smtpLogin = process.env.SMTP_LOGIN
-    const smtpPassword = process.env.SMTP_PASSWORD || apiKey
+    // Check if email service is configured
+    const EMAIL_API_KEY = process.env.BREVO_API_KEY
+    console.log('Contact API: EMAIL_API_KEY exists:', !!EMAIL_API_KEY)
     
-    const transporter = nodemailer.createTransport({
-      host: smtpHost,
-      port: smtpPort,
-      secure: false,
-      auth: {
-        user: smtpLogin || senderEmail, // Use SMTP login if available
-        pass: smtpPassword              // Use SMTP password or API key
-      }
-    })
+    if (!EMAIL_API_KEY) {
+      console.log('Contact API: No EMAIL_API_KEY configured')
+      return NextResponse.json(
+        { error: 'Contact form is not configured yet. Please try again later.' },
+        { status: 503 }
+      )
+    }
+
+    // Send email notification
+    const notificationEmail = process.env.BREVO_TO_EMAIL || "contact@legaleyes.co"
+    const senderEmail = process.env.BREVO_SENDER_EMAIL || notificationEmail
+    
+    if (!notificationEmail) {
+      console.log('Contact API: No NOTIFICATION_EMAIL configured')
+      return NextResponse.json(
+        { error: 'Contact form is not configured yet. Please try again later.' },
+        { status: 503 }
+      )
+    }
+    
+    if (!senderEmail) {
+      console.log('Contact API: No SENDER_EMAIL configured')
+      return NextResponse.json(
+        { error: 'Contact form is not configured yet. Please try again later.' },
+        { status: 503 }
+      )
+    }
+
+    const servicePrefix = body.serviceType === "business" ? "[B]" : "[I]"
+    const subject = `${servicePrefix} ${process.env.EMAIL_SUBJECT_LINE || 'Contract Review Request From'} ${body.name}`
+    
+    const textContent = `${process.env.EMAIL_TEXT_PREFIX || 'New Contract Review Request'}
+
+Name: ${body.name}
+Email: ${body.email}
+${body.phone ? `Phone: ${body.phone}` : ''}
+${body.company ? `Company: ${body.company}` : ''}
+Service Type: ${body.serviceType === "business" ? "Business" : "Individual"}
+Message:
+${body.message}
+
+Sent from: ${process.env.WEBSITE_NAME || 'LegalEyes'} contact form
+Time: ${new Date().toLocaleString()}
+Message ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
 
     const htmlContent = `
-      <div>
-        <h2>${subject}</h2>
-        <p><strong>Name:</strong> ${body.name}</p>
-        <p><strong>Email:</strong> ${body.email}</p>
-        ${body.phone ? `<p><strong>Phone:</strong> ${body.phone}</p>` : ""}
-        ${body.company ? `<p><strong>Company:</strong> ${body.company}</p>` : ""}
-        <p><strong>Service type:</strong> ${body.serviceType === "business" ? "Business" : "Individual"}</p>
-        <hr />
-        <p><strong>Message:</strong></p>
-        <pre style="white-space:pre-wrap;font-family:inherit">${body.message}</pre>
-      </div>
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>${subject}</title>
+      </head>
+      <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+          <h1 style="color: #000; margin: 0 0 20px 0; font-size: 24px; border-bottom: 3px solid #000; padding-bottom: 10px;">
+            ${process.env.EMAIL_HEADING || 'New Contract Review Request'}
+          </h1>
+          
+          <div style="background: #f8f9fa; padding: 20px; border-left: 4px solid #000; margin: 20px 0; border-radius: 4px;">
+            <p style="margin: 10px 0;"><strong>Name:</strong> ${body.name}</p>
+            <p style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:${body.email}" style="color: #007bff; text-decoration: none;">${body.email}</a></p>
+            ${body.phone ? `<p style="margin: 10px 0;"><strong>Phone:</strong> ${body.phone}</p>` : ''}
+            ${body.company ? `<p style="margin: 10px 0;"><strong>Company:</strong> ${body.company}</p>` : ''}
+            <p style="margin: 10px 0;"><strong>Service Type:</strong> ${body.serviceType === "business" ? "Business" : "Individual"}</p>
+            <p style="margin: 10px 0;"><strong>Message:</strong></p>
+            <div style="background: white; padding: 15px; border: 1px solid #dee2e6; border-radius: 4px; margin-top: 10px; white-space: pre-wrap;">
+              ${body.message.replace(/\n/g, '<br>')}
+            </div>
+          </div>
+          
+          <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e0e0e0; font-size: 14px; color: #666;">
+            <p style="margin: 5px 0;"><strong>Sent from:</strong> ${process.env.WEBSITE_NAME || 'LegalEyes'} contact form</p>
+            <p style="margin: 5px 0;"><strong>Time:</strong> ${new Date().toLocaleString()}</p>
+            <p style="margin: 5px 0;"><strong>Message ID:</strong> ${Date.now()}-${Math.random().toString(36).substr(2, 9)}</p>
+          </div>
+        </div>
+      </body>
+      </html>
     `
 
-    console.log("Sending email with nodemailer...")
-    console.log("From:", allowExternalFrom ? `"${body.name}" <${body.email}>` : `"${senderName}" <${senderEmail}>`)
-    console.log("To:", toEmail)
-    console.log("Subject:", subject)
-
-    await transporter.sendMail({
-      from: allowExternalFrom 
-        ? `"${body.name}" <${body.email}>`
-        : `"${senderName}" <${senderEmail}>`,
-      to: toEmail,
-      replyTo: allowExternalFrom 
-        ? undefined 
-        : `"${body.name}" <${body.email}>`,
-      subject,
-      html: htmlContent,
+    console.log('Contact API: Sending email to Brevo API')
+    console.log('Contact API: Sender email:', senderEmail)
+    console.log('Contact API: Notification email:', notificationEmail)
+    
+    const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'api-key': EMAIL_API_KEY,
+      },
+      body: JSON.stringify({
+        sender: {
+          name: process.env.BREVO_SENDER_NAME || 'LegalEyes',
+          email: senderEmail,
+        },
+        to: [{ email: notificationEmail, name: process.env.RECIPIENT_NAME || 'LegalEyes Admin' }],
+        replyTo: {
+          email: body.email,
+          name: body.name,
+        },
+        subject,
+        textContent,
+        htmlContent,
+        // Add headers for better deliverability
+        headers: {
+          'X-Mailin-Custom': process.env.EMAIL_CUSTOM_HEADER || 'contract-review-request',
+          'X-Priority': process.env.EMAIL_PRIORITY || '1',
+          'X-MSMail-Priority': process.env.EMAIL_MS_PRIORITY || 'High',
+          'Importance': process.env.EMAIL_IMPORTANCE || 'high'
+        }
+      }),
     })
     
-    console.log("Email sent successfully!")
+    console.log('Contact API: Brevo response status:', response.status)
 
-    return NextResponse.json({ success: true })
+    if (!response.ok) {
+      const errorText = await response.text()
+      console.error('Contact API: Email service failed:', errorText)
+      console.error('Contact API: Response headers:', Object.fromEntries(response.headers.entries()))
+      return NextResponse.json(
+        { error: 'Failed to send message. Please try again later.' },
+        { status: 500 }
+      )
+    }
+
+    const emailResult = await response.json()
+    console.log('Contact API: Email sent successfully, result:', emailResult)
+    return NextResponse.json({ 
+      success: true,
+      message: 'Message sent successfully!'
+    })
+
   } catch (error) {
-    console.error("Brevo email error", error)
-    console.error("Error details:", error instanceof Error ? error.message : error)
+    console.error('Contact API: Unexpected error:', error)
     return NextResponse.json(
-      { error: "Failed to send message" },
+      { error: 'Internal server error' },
       { status: 500 }
     )
   }
 }
-
-
