@@ -62,6 +62,7 @@ export async function POST(request: NextRequest) {
         { status: 503 }
       )
     }
+    const emailApiKey = EMAIL_API_KEY as string
 
     const servicePrefix = body.serviceType === "business" ? "[B]" : "[I]"
     const subject = `${servicePrefix} ${subjectLine} ${body.name}`
@@ -125,7 +126,7 @@ Message ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'api-key': EMAIL_API_KEY,
+        'api-key': emailApiKey,
       },
       body: JSON.stringify({
         sender: {
