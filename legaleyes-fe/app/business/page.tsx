@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+import { ContactForm } from "@/components/contact-form"
 import {
   Shield,
   Users,
@@ -671,95 +672,11 @@ export default function LegalEyesPage() {
       </div>
 
       {/* Contact Section */}
-      <div id="contact" className="py-24 bg-gradient-to-br from-slate-50 to-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-slate">
-              Ready to get started?
-            </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Send us your contract details and we'll get back to you quickly with a detailed review.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-2xl shadow-xl border border-slate-200 p-8 md:p-12">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                const form = e.currentTarget as HTMLFormElement
-                const formData = new FormData(form)
-                const name = String(formData.get('name') || '')
-                const email = String(formData.get('email') || '')
-                const message = String(formData.get('message') || '')
-                const subject = encodeURIComponent(`Contract Review Inquiry from ${name}`)
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nContract Details:\n${message}`)
-                window.location.href = `mailto:hello@legaleyes.com?subject=${subject}&body=${body}`
-              }}
-              className="space-y-6"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                    Your name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                    Email address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors"
-                    placeholder="your.email@domain.com"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                  Tell us about your business contract
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={6}
-                  className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors resize-none"
-                  placeholder="Please describe your contract type (vendor agreement, SaaS contract, employment, partnership, etc.), company size, any specific concerns, and your preferred timeline for the review."
-                />
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button 
-                  type="submit" 
-                  className="flex-1 bg-emerald hover:bg-emerald/90 text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl "
-                >
-                  Send my contract for review
-                </Button>
-                <Button 
-                  asChild
-                  variant="outline"
-                  className="flex-1 border-2 border-emerald text-emerald hover:bg-emerald hover:text-white py-4 text-lg font-semibold rounded-lg "
-                >
-                  <a href="#pricing">View pricing</a>
-                </Button>
-              </div>
-              
-            </form>
-          </div>
-        </div>
-      </div>
+      <ContactForm 
+        serviceType="business"
+        title="Ready to get started?"
+        description="Send us your contract details and we'll get back to you quickly with a detailed review."
+      />
 
       {/* Footer */}
       <Footer />
