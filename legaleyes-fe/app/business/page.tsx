@@ -672,11 +672,13 @@ export default function LegalEyesPage() {
       </div>
 
       {/* Contact Section */}
-      <ContactForm 
-        serviceType="business"
-        title="Ready to get started?"
-        description="Send us your contract details and we'll get back to you quickly with a detailed review."
-      />
+      <div id="contact">
+        <ContactForm 
+          serviceType="business"
+          title="Ready to get started?"
+          description="Send us your contract details and we'll get back to you quickly with a detailed review."
+        />
+      </div>
 
       {/* Footer */}
       <Footer />
