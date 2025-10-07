@@ -1,11 +1,6 @@
 // Email service configuration
-// You'll need to get these from EmailJS dashboard after setup
-
 export const EMAIL_CONFIG = {
-  // Server-side Brevo target
   API_ENDPOINT: "/api/contact",
-  // Fallback business email
-  TO_EMAIL: 'contact@legaleyes.co',
 }
 
 export interface ContactFormData {
@@ -17,12 +12,8 @@ export interface ContactFormData {
   serviceType: 'business' | 'individual'
 }
 
-export interface EmailResponse {
-  success: boolean
-  message: string
-}
+export interface EmailResponse { success: boolean; message: string }
 
-// EmailJS implementation (when you set up EmailJS)
 export async function sendEmailViaBrevoApi(data: ContactFormData): Promise<EmailResponse> {
   try {
     const res = await fetch(EMAIL_CONFIG.API_ENDPOINT, {
@@ -36,28 +27,8 @@ export async function sendEmailViaBrevoApi(data: ContactFormData): Promise<Email
     }
     return { success: true, message: "Thank you! We'll get back to you within 24 hours." }
   } catch (error) {
-    return { success: false, message: 'Failed to send via server. Falling back to email link.' }
+    return { success: false, message: 'Failed to send via server.' }
   }
-}
-
-// Fallback: Direct email link (current implementation)
-export function createMailtoLink(data: ContactFormData): string {
-  const subject = encodeURIComponent(
-    `${data.serviceType === 'business' ? 'Business' : 'Individual'} Contract Review Request from ${data.name}`
-  )
-  
-  const body = encodeURIComponent(`
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone || 'Not provided'}
-Company: ${data.company || 'Not provided'}
-Service Type: ${data.serviceType === 'business' ? 'Business' : 'Individual'}
-
-Contract Details:
-${data.message}
-  `.trim())
-
-  return `mailto:${EMAIL_CONFIG.TO_EMAIL}?subject=${subject}&body=${body}`
 }
 
 // Form validation

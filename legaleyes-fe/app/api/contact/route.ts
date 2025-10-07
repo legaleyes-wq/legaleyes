@@ -12,20 +12,15 @@ interface ContactBody {
 }
 
 export async function POST(request: NextRequest) {
-  console.log('Contact API: Request received')
+  // Contact endpoint invoked
   
   try {
     const body = (await request.json()) as Partial<ContactBody>
-    console.log('Contact API: Parsed request data:', { 
-      name: body.name, 
-      email: body.email, 
-      serviceType: body.serviceType,
-      messageLength: body.message?.length 
-    })
+    // Minimal request introspection (no PII logged)
 
     // Validation
     if (!body.name || !body.email || !body.message || !body.serviceType) {
-      console.log('Contact API: Validation failed - missing fields')
+      // Missing required fields
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -55,7 +50,7 @@ export async function POST(request: NextRequest) {
     if (!senderName) missing.push('BREVO_SENDER_NAME')
     if (!subjectLine) missing.push('EMAIL_SUBJECT_LINE')
     // Only the five original keys are required; others are optional
-    console.log('Contact API: env check missing=', missing)
+    // Env check
     if (missing.length > 0) {
       return NextResponse.json(
         { error: 'Server not configured', missing },
@@ -117,9 +112,7 @@ Message ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
       </html>
     `
 
-    console.log('Contact API: Sending email to Brevo API')
-    console.log('Contact API: Sender email:', senderEmail)
-    console.log('Contact API: Notification email:', notificationEmail)
+    // Send to Brevo API
     
     const response = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
@@ -151,20 +144,18 @@ Message ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
       }),
     })
     
-    console.log('Contact API: Brevo response status:', response.status)
+    // Brevo response status for observability
 
     if (!response.ok) {
       const errorText = await response.text()
-      console.error('Contact API: Email service failed:', errorText)
-      console.error('Contact API: Response headers:', Object.fromEntries(response.headers.entries()))
+      console.error('Contact API: Email service failed')
       return NextResponse.json(
         { error: 'Failed to send message. Please try again later.' },
         { status: 500 }
       )
     }
 
-    const emailResult = await response.json()
-    console.log('Contact API: Email sent successfully, result:', emailResult)
+    await response.json()
     return NextResponse.json({ 
       success: true,
       message: 'Message sent successfully!'

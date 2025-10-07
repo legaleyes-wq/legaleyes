@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react"
-import { ContactFormData, sendEmailViaBrevoApi, createMailtoLink, validateContactForm } from "@/lib/email-service"
+import { ContactFormData, sendEmailViaBrevoApi, validateContactForm } from "@/lib/email-service"
 
 interface ContactFormProps {
   serviceType: 'business' | 'individual'
