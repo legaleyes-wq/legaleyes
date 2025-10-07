@@ -2,7 +2,7 @@
 import Link from "next/link"
 
 interface HeaderProps {
-  currentPage?: "business" | "individual"
+  currentPage?: "business" | "individual" | "landing"
 }
 
 export function Header({ currentPage }: HeaderProps) {
@@ -44,6 +44,8 @@ export function Header({ currentPage }: HeaderProps) {
                   ? "bg-emerald-500 text-white shadow-md" 
                   : currentPage === "individual"
                   ? "text-emerald-100 hover:text-white hover:bg-white/20"
+                  : currentPage === "landing"
+                  ? "text-slate-400 hover:text-slate-600"
                   : "bg-white text-slate-600 shadow-sm"
               }`}
             >
@@ -56,6 +58,8 @@ export function Header({ currentPage }: HeaderProps) {
                   ? "bg-white text-emerald-600 shadow-md" 
                   : currentPage === "business"
                   ? "text-slate-300 hover:text-white hover:bg-slate-600/50"
+                  : currentPage === "landing"
+                  ? "text-slate-400 hover:text-slate-600"
                   : "text-slate-400 hover:text-slate-600"
               }`}
             >

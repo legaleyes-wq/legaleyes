@@ -15,7 +15,7 @@ import {
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header currentPage="landing" />
       
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-50 via-white to-emerald-50 scroll-mt-24 relative overflow-hidden" id="hero">
