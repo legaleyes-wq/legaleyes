@@ -9,55 +9,57 @@ import {
   Shield,
   Users,
   CheckCircle,
-  Clock,
+  Eye,
+  MessageSquare,
+  Star,
   ArrowRight,
-  FileText,
-  User,
+  Award,
+  Clock,
   AlertTriangle,
+  FileText,
 } from "lucide-react"
 
-export default function IndividualContractPage() {
+export default function LegalEyesPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header currentPage="individual" />
-
+      <Header currentPage="business" />
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-emerald-100 via-white to-gold-100 scroll-mt-24 relative overflow-hidden" id="about">
-        {/* Personal-themed background elements */}
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 scroll-mt-24 relative overflow-hidden" id="about">
+        {/* Business-themed background elements */}
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 right-10 w-40 h-40 bg-emerald/10 rounded-full blur-2xl"></div>
-          <div className="absolute top-32 left-20 w-32 h-32 bg-gold/10 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-10 right-1/3 w-36 h-36 bg-deep-blue/10 rounded-full blur-2xl"></div>
-          {/* Warm, organic pattern */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(16,185,129,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.05)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(30,58,138,0.05)_0%,transparent_50%)]"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 bg-emerald/10 rounded-full blur-xl"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-gold/10 rounded-full blur-xl"></div>
+          <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-deep-blue/10 rounded-full blur-xl"></div>
+          {/* Professional grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32 relative z-10">
           <div className="text-center">
             <div className="mb-8">
 
-              <h1 className="text-6xl md:text-8xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)] text-balance tracking-tight">
-                Contracts, made <span className="text-gold">clear</span>.
+              <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 font-[family-name:var(--font-merriweather)] text-balance tracking-tight">
+                Contracts, made <span className="text-emerald-400">clear</span>.
               </h1>
 
-              <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto text-balance font-[family-name:var(--font-inter)]">
-                Personal contract review by <span className="text-gold font-semibold">friendly legal experts</span>.
+              <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto text-balance font-[family-name:var(--font-inter)]">
+                Enterprise-grade contract review by <span className="text-emerald-400 font-semibold">senior legal professionals</span>.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald  shadow-2xl hover:shadow-emerald-500/25  transform text-white font-semibold">
+              <Button asChild size="lg" className="text-lg px-10 py-7 bg-gradient-emerald hover:bg-emerald/90 text-white font-semibold">
                 <a href="#contact">
                   Start your review
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white  font-semibold">
+              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 bg-white border-2 border-emerald text-emerald hover:bg-emerald hover:text-white font-semibold">
                 <a href="#pricing">See pricing</a>
               </Button>
             </div>
             
             <div className="text-center mb-12">
-              <Button asChild variant="ghost" className="text-emerald hover:text-emerald/80 hover:bg-emerald/10 ">
+              <Button asChild variant="ghost" className="text-emerald hover:text-emerald/80 hover:bg-emerald/10">
                 <a href="#sample-report">
                   View sample report
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -71,21 +73,21 @@ export default function IndividualContractPage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <Badge
                 variant="secondary"
-                className="px-6 py-3 bg-white border border-gold text-gold hover:bg-gold hover:text-white  font-medium"
+                className="px-6 py-3 bg-white border border-gold text-gold hover:bg-gold hover:text-white font-medium"
               >
                 <CheckCircle className="mr-2 h-4 w-4" />
                 Flat Pricing
               </Badge>
               <Badge
                 variant="secondary"
-                className="px-6 py-3 bg-white border border-emerald text-emerald hover:bg-emerald hover:text-white  font-medium"
+                className="px-6 py-3 bg-white border border-emerald text-emerald hover:bg-emerald hover:text-white font-medium"
               >
                 <Shield className="mr-2 h-4 w-4" />
                 NDA-First Workflow
               </Badge>
               <Badge
                 variant="secondary"
-                className="px-6 py-3 bg-white border border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white  font-medium"
+                className="px-6 py-3 bg-white border border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white font-medium"
               >
                 <Clock className="mr-2 h-4 w-4" />
                 48h Turnaround
@@ -96,7 +98,8 @@ export default function IndividualContractPage() {
       </div>
 
       {/* Sample Report Section */}
-      <div id="sample-report" className="py-16 bg-gradient-to-br from-gold-50/30 to-white relative overflow-hidden">
+      <div id="sample-report" className="py-16 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 ">
@@ -111,8 +114,8 @@ export default function IndividualContractPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle className="h-5 w-5 text-gold" />
+                <div className="w-8 h-8 bg-emerald/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="h-5 w-5 text-emerald" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate mb-2">Executive Summary</h3>
@@ -121,8 +124,8 @@ export default function IndividualContractPage() {
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle className="h-5 w-5 text-gold" />
+                <div className="w-8 h-8 bg-emerald/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="h-5 w-5 text-emerald" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate mb-2">Clause-by-Clause Analysis</h3>
@@ -131,8 +134,8 @@ export default function IndividualContractPage() {
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle className="h-5 w-5 text-gold" />
+                <div className="w-8 h-8 bg-emerald/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="h-5 w-5 text-emerald" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate mb-2">Red Flags & Recommendations</h3>
@@ -143,8 +146,8 @@ export default function IndividualContractPage() {
             
             <div className="bg-white rounded-lg border-2 border-slate-200 p-6 shadow-lg">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center">
-                  <FileText className="h-4 w-4 text-gold" />
+                <div className="w-8 h-8 bg-emerald/10 rounded-full flex items-center justify-center">
+                  <FileText className="h-4 w-4 text-emerald" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate">Sample Report</h4>
@@ -154,7 +157,7 @@ export default function IndividualContractPage() {
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <span className="text-slate-600">Pages:</span>
-                  <span className="font-medium">6-10 pages</span>
+                  <span className="font-medium">8-12 pages</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-600">Format:</span>
@@ -162,10 +165,10 @@ export default function IndividualContractPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-600">Turnaround:</span>
-                  <span className="font-medium">24 hours</span>
+                  <span className="font-medium">24-48 hours</span>
                 </div>
               </div>
-              <Button asChild className="w-full mt-4 bg-gold hover:bg-gold/90 text-white">
+              <Button asChild className="w-full mt-4 bg-emerald hover:bg-emerald/90">
                 <a href="#contact">Get your report</a>
               </Button>
             </div>
@@ -173,9 +176,12 @@ export default function IndividualContractPage() {
         </div>
       </div>
 
-
       {/* Why LegalEyes Section */}
-      <div className="py-24 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden">
+      <div className="py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald/5 rounded-full -translate-y-48 translate-x-48"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full translate-y-40 -translate-x-40"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 ">
@@ -183,7 +189,7 @@ export default function IndividualContractPage() {
               Why <span className="text-emerald">LegalEyes</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto text-balance">
-              Personal contracts, employment agreements, and service contracts reviewed by lawyers who understand your needs.
+              SaaS, vendor, employment and data‑protection contracts, reviewed by lawyers who do this every day.
             </p>
           </div>
 
@@ -191,13 +197,13 @@ export default function IndividualContractPage() {
             <Card className="text-center p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
                 <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-emerald/30 bg-white  ">
-                  <User className="h-8 w-8 text-emerald" />
+                  <Users className="h-8 w-8 text-emerald" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
-                  Personal Focus
+                  Human Expertise
                 </h3>
                 <p className="text-slate-600 text-lg">
-                  We understand individual concerns and explain everything in plain English you can actually understand.
+                  Real lawyers with decades of experience review every contract personally.
                 </p>
               </CardContent>
             </Card>
@@ -205,13 +211,13 @@ export default function IndividualContractPage() {
             <Card className="text-center p-8 border-2 border-slate-200 hover:border-gold/50  hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
                 <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-gold/30 bg-white  ">
-                  <Shield className="h-8 w-8 text-gold" />
+                  <MessageSquare className="h-8 w-8 text-gold" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
-                  Your Privacy First
+                  Plain Language
                 </h3>
                 <p className="text-slate-600 text-lg">
-                  NDA-first workflow ensures your personal documents stay completely confidential and secure.
+                  Complex legal jargon translated into clear, actionable insights.
                 </p>
               </CardContent>
             </Card>
@@ -219,13 +225,13 @@ export default function IndividualContractPage() {
             <Card className="text-center p-8 border-2 border-slate-200 hover:border-deep-blue/50  hover:shadow-2xl hover:-translate-y-3 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
               <CardContent className="pt-6">
                 <div className="rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-sm border border-deep-blue/30 bg-white  ">
-                  <Clock className="h-8 w-8 text-deep-blue" />
+                  <Eye className="h-8 w-8 text-deep-blue" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
-                  Fast Turnaround
+                  Direct Counsel
                 </h3>
                 <p className="text-slate-600 text-lg">
-                  Get your contract reviewed and explained within 24-48 hours, so you can make informed decisions quickly.
+                  Available in Retainer Pro for complex contracts and strategic guidance.
                 </p>
               </CardContent>
             </Card>
@@ -241,7 +247,7 @@ export default function IndividualContractPage() {
               Don't get <span className="text-red-500">locked in</span> to bad terms
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              A small investment now can save you thousands in legal fees, penalties, and stress later.
+              A small investment now can save you thousands in legal fees, penalties, and business disruption later.
             </p>
           </div>
 
@@ -267,8 +273,8 @@ export default function IndividualContractPage() {
               </div>
               <div className="bg-gradient-to-r from-emerald-50 to-gold-50 rounded-xl p-6 border border-emerald-200">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald mb-2">₹499 vs ₹50,000+</div>
-                  <p className="text-slate-600">Small review cost vs potential legal fees and penalties</p>
+                  <div className="text-3xl font-bold text-emerald mb-2">₹999 vs ₹1,00,000+</div>
+                  <p className="text-slate-600">Small review cost vs potential legal fees and business disruption</p>
                 </div>
               </div>
             </div>
@@ -292,7 +298,7 @@ export default function IndividualContractPage() {
       </div>
 
       {/* How It Works Section */}
-      <div className="py-24 bg-gradient-to-br from-emerald-50/30 to-white scroll-mt-24 relative overflow-hidden" id="how">
+      <div className="py-24 bg-gradient-to-br from-slate-50 to-white scroll-mt-24 relative overflow-hidden" id="how">
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="text-center mb-16 ">
@@ -310,11 +316,12 @@ export default function IndividualContractPage() {
                 <span className="text-3xl font-bold text-white">1</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
-                Share Your Contract
+                Upload Contract
               </h3>
-              <p className="text-slate text-lg">
-                Upload your contract. We'll send an NDA and secure link after you contact us.
+              <p className="text-slate-600 text-lg">
+                Share your contract securely. We'll send an NDA and upload link after you contact us.
               </p>
+              <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-emerald/50 to-transparent animate-pulse"></div>
             </div>
 
             <div className="text-center relative  ">
@@ -324,9 +331,11 @@ export default function IndividualContractPage() {
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
                 Expert Review
               </h3>
-              <p className="text-slate text-lg">
-                <span className="text-emerald font-semibold">Senior lawyers</span> review every clause and flag potential issues.
+              <p className="text-slate-600 text-lg">
+                <span className="text-gold font-semibold">Experienced lawyers</span> review, redline, and identify key
+                risks and opportunities.
               </p>
+              <div className="hidden md:block absolute top-12 left-full w-12 h-0.5 bg-gradient-to-r from-gold/50 to-transparent animate-pulse"></div>
             </div>
 
             <div className="text-center  ">
@@ -334,14 +343,14 @@ export default function IndividualContractPage() {
                 <span className="text-3xl font-bold text-white">3</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
-                Get Clarity
+                Get Results
               </h3>
-              <p className="text-slate text-lg">
-                Receive a <span className="text-deep-blue font-semibold">plain-English summary</span> of what you're signing.
+              <p className="text-slate-600 text-lg">
+                Receive detailed analysis and <span className="text-deep-blue font-semibold">plain-English summary</span>.
               </p>
             </div>
           </div>
-          <p className="text-center text-sm text-slate-600 mt-10">Independent review. No third-party involvement. Your privacy protected.</p>
+          <p className="text-center text-sm text-muted-foreground mt-10">NDA-first workflow. Secure storage. Confidential review.</p>
         </div>
       </div>
 
@@ -350,27 +359,32 @@ export default function IndividualContractPage() {
         {/* Background decoration */}
         <div className="absolute top-0 left-0 w-80 h-80 bg-emerald/5 rounded-full -translate-y-40 -translate-x-40"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/5 rounded-full translate-y-48 translate-x-48"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2  ">
-              <div className="text-4xl md:text-5xl font-bold text-emerald font-[family-name:var(--font-merriweather)]  ">2,500+</div>
-              <div className="text-lg text-slate-300">Individual contracts reviewed</div>
+              <div className="text-4xl md:text-5xl font-bold text-emerald font-[family-name:var(--font-merriweather)]  ">5,000+</div>
+              <div className="text-lg text-slate-300">Contracts reviewed</div>
             </div>
             <div className="space-y-2  ">
-              <div className="text-4xl md:text-5xl font-bold text-gold font-[family-name:var(--font-merriweather)]  ">24h</div>
-              <div className="text-lg text-slate-300">Average turnaround time</div>
+              <div className="text-4xl md:text-5xl font-bold text-gold font-[family-name:var(--font-merriweather)]  ">17</div>
+              <div className="text-lg text-slate-300">Avg. critical issues flagged per review</div>
             </div>
             <div className="space-y-2  ">
-              <div className="text-4xl md:text-5xl font-bold text-deep-blue font-[family-name:var(--font-merriweather)]  ">99%</div>
-              <div className="text-lg text-slate-300">Clients feel more confident signing</div>
+              <div className="text-4xl md:text-5xl font-bold text-deep-blue font-[family-name:var(--font-merriweather)]  ">92%</div>
+              <div className="text-lg text-slate-300">Clients approve on first pass</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Testimonials Section */}
-      <div className="py-24 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden">
+      {/* Testimonials Section (moved before pricing for trust) */}
+      <div className="py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden" id="testimonials">
+        {/* Background decoration */}
+        <div className="absolute top-0 left-0 w-80 h-80 bg-emerald/5 rounded-full -translate-y-40 -translate-x-40"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/5 rounded-full translate-y-48 translate-x-48"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="text-center mb-16 ">
@@ -378,85 +392,64 @@ export default function IndividualContractPage() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-slate max-w-2xl mx-auto">
-              Real people, real results. See how LegalEyes has helped individuals protect themselves.
+              Real people, real results. See how LegalEyes has helped businesses protect themselves.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8 hover:shadow-xl  hover:-translate-y-2 bg-gradient-to-br from-card to-background  ">
               <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-gold">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 fill-current  " viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                      </svg>
-                    ))}
-                  </div>
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-gold fill-current  " />
+                  ))}
                 </div>
-                <p className="text-slate mb-6 text-lg leading-relaxed">
-                  "I was about to sign a freelance contract that would have locked me into terrible terms. LegalEyes caught the red flags and saved me from a huge mistake. Worth every rupee!"
-                </p>
+                <blockquote className="text-lg mb-6 text-balance italic">
+                  "All our contracts are vetted by LegalEyes. The comfort of dealing with a human for Legal work is priceless. It's like insurance, but smarter."
+                </blockquote>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mr-4  ">
-                    <User className="h-6 w-6 text-emerald" />
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3  ">
+                    <Award className="h-5 w-5 text-emerald" />
                   </div>
-                  <div>
-                    <div className="font-semibold text-slate">Priya S.</div>
-                    <div className="text-sm text-slate-600">Freelance Designer</div>
-                  </div>
+                  <div className="text-sm text-muted-foreground">Startup Founder</div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
+            <Card className="p-8 hover:shadow-xl  hover:-translate-y-2 bg-gradient-to-br from-card to-background  ">
               <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-gold">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 fill-current  " viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                      </svg>
-                    ))}
-                  </div>
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-gold fill-current  " />
+                  ))}
                 </div>
-                <p className="text-slate mb-6 text-lg leading-relaxed">
-                  "The employment contract review was incredibly detailed. They explained every clause in simple terms and helped me negotiate better terms. Highly recommended!"
-                </p>
+                <blockquote className="text-lg mb-6 text-balance italic">
+                  "This is like having your own in-house legal team on call, minus the cost."
+                </blockquote>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mr-4  ">
-                    <User className="h-6 w-6 text-emerald" />
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3  ">
+                    <Award className="h-5 w-5 text-emerald" />
                   </div>
-                  <div>
-                    <div className="font-semibold text-slate">Rajesh K.</div>
-                    <div className="text-sm text-slate-600">Software Engineer</div>
-                  </div>
+                  <div className="text-sm text-muted-foreground">Business Owner</div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white  ">
+            <Card className="p-8 hover:shadow-xl  hover:-translate-y-2 bg-gradient-to-br from-card to-background  ">
               <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-gold">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 fill-current  " viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                      </svg>
-                    ))}
-                  </div>
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-gold fill-current  " />
+                  ))}
                 </div>
-                <p className="text-slate mb-6 text-lg leading-relaxed">
-                  "I was nervous about my rental agreement, but LegalEyes made it so clear and easy to understand. The consultation call was the cherry on top - felt like having a lawyer friend!"
-                </p>
+                <blockquote className="text-lg mb-6 text-balance italic">
+                  "As a tech startup, our priorities lie elsewhere. Outsourcing all legal to LegalEyes has saved us countless hours and exorbitant fees. Highly recommended for early-stage founders."
+                </blockquote>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mr-4  ">
-                    <User className="h-6 w-6 text-emerald" />
+                  <div className="w-10 h-10 bg-emerald/10 rounded-full flex items-center justify-center mr-3  ">
+                    <Award className="h-5 w-5 text-emerald" />
                   </div>
-                  <div>
-                    <div className="font-semibold text-slate">Anita M.</div>
-                    <div className="text-sm text-slate-600">Marketing Professional</div>
-                  </div>
+                  <div className="text-sm text-muted-foreground">Tech Startup CEO</div>
                 </div>
               </CardContent>
             </Card>
@@ -466,32 +459,37 @@ export default function IndividualContractPage() {
 
       {/* Pricing Section */}
       <div className="py-24 bg-gradient-to-br from-white to-slate-50 scroll-mt-24 relative overflow-hidden" id="pricing">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald/5 rounded-full -translate-y-40 translate-x-40"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full translate-y-48 -translate-x-48"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 ">
             <h2 className="text-5xl md:text-6xl font-bold text-slate mb-6 font-[family-name:var(--font-merriweather)]">
-              <span className="text-emerald">Simple</span> Pricing
+              <span className="text-emerald">Transparent</span> Pricing
             </h2>
             <p className="text-xl text-slate-600">
-              One price per contract. <span className="text-emerald font-semibold">No subscriptions</span>
+              No hidden charges, <span className="text-emerald font-semibold">no surprises</span>
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8 border-2 border-slate-200 hover:border-emerald/50  hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 border-2 border-slate-200 hover:border-deep-blue/50  hover:shadow-2xl hover:-translate-y-2 bg-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col  ">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-deep-blue/10 rounded-full -translate-y-16 translate-x-16"></div>
               <CardContent className="pt-6 relative flex flex-col h-full">
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
-                  Basic Review
+                  Per Contract
                 </h3>
-                <p className="text-slate-600 mb-6 text-lg min-h-[3rem] flex items-center">Standard contract review</p>
+                <p className="text-slate-600 mb-6 text-lg min-h-[3rem] flex items-center">One-time contract review</p>
                 <div className="text-5xl font-bold text-emerald mb-6 flex items-baseline">
-                  ₹499
+                  Flat Fee
                   <span className="text-sm font-normal text-slate-500 ml-2">per contract</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-grow">
                   <li className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
-                    <span className="text-lg">Complete contract analysis</span>
+                    <span className="text-lg">Complete contract review</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
@@ -499,54 +497,83 @@ export default function IndividualContractPage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
-                    <span className="text-lg">Red flags highlighted</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
-                    <span className="text-lg">24-hour turnaround</span>
+                    <span className="text-lg">48-hour turnaround</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-emerald hover:bg-emerald/90 hover:scale-105 shadow-xl hover:shadow-emerald-500/25  text-lg py-6 font-semibold mt-auto">
-                  <a href="#contact">Get Started</a>
+                <Button asChild className="w-full bg-emerald hover:bg-emerald/90  shadow-xl hover:shadow-emerald-500/25  text-lg py-6 font-semibold mt-auto">
+                  <a href="#contact">Start Review</a>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60  hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col">
+            <Card className="p-8 border-2 border-emerald/30 hover:border-emerald/60  hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-emerald-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col  ">
               <div className="absolute top-4 right-4">
-                <Badge className="bg-emerald text-white px-4 py-2 font-semibold">
+                <Badge className="bg-gradient-emerald text-white px-4 py-2 font-semibold">
                   Most Popular
                 </Badge>
               </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald/10 rounded-full -translate-y-16 translate-x-16"></div>
               <CardContent className="pt-6 relative flex flex-col h-full">
                 <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
-                  Premium Review
+                  Retainer
                 </h3>
-                <p className="text-slate-600 mb-6 text-lg min-h-[3rem] flex items-center">Everything in Basic plus consultation</p>
+                <p className="text-slate-600 mb-6 text-lg min-h-[3rem] flex items-center">Monthly contract reviews</p>
+                <div className="text-5xl font-bold text-emerald mb-6 flex items-baseline">
+                  Monthly
+                  <span className="text-sm font-normal text-slate-500 ml-2">subscription</span>
+                </div>
+                <ul className="space-y-4 mb-8 flex-grow">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
+                    <span className="text-lg">Multiple contract reviews</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
+                    <span className="text-lg">Priority support</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-emerald mr-3 flex-shrink-0" />
+                    <span className="text-lg">Faster turnaround</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full bg-gradient-emerald  shadow-xl hover:shadow-emerald-500/25  text-lg py-6 font-semibold mt-auto">
+                  <a href="#contact">Contact Sales</a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-gold/30 hover:border-gold/60  hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-yellow-50/30 to-white hover:bg-gradient-to-br hover:from-emerald-50/50 hover:to-white relative overflow-hidden h-full flex flex-col  ">
+              <div className="absolute top-4 right-4">
+                <Badge className="bg-gradient-gold text-white px-4 py-2 font-semibold">
+                  Pro
+                </Badge>
+              </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <CardContent className="pt-6 relative flex flex-col h-full">
+                <h3 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-merriweather)] text-slate">
+                  Retainer Pro
+                </h3>
+                <p className="text-slate-600 mb-6 text-lg min-h-[3rem] flex items-center">Everything in Retainer plus consultation</p>
                 <div className="text-5xl font-bold text-gold mb-6 flex items-baseline">
-                  ₹4999
-                  <span className="text-sm font-normal text-slate-500 ml-2">per contract</span>
+                  Premium
+                  <span className="text-sm font-normal text-slate-500 ml-2">pricing</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-grow">
                   <li className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-gold mr-3 flex-shrink-0" />
-                    <span className="text-lg">Everything in Basic</span>
+                    <span className="text-lg">Everything in Retainer</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-gold mr-3 flex-shrink-0" />
-                    <span className="text-lg">15-min consultation call</span>
+                    <span className="text-lg">1-on-1 consultation calls</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-gold mr-3 flex-shrink-0" />
-                    <span className="text-lg">Negotiation tips</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-6 w-6 text-gold mr-3 flex-shrink-0" />
-                    <span className="text-lg">Priority support</span>
+                    <span className="text-lg">Dedicated attorney</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-gold hover:bg-gold/90 hover:scale-105 shadow-xl hover:shadow-gold-500/25  text-lg py-6 font-semibold mt-auto">
-                  <a href="#contact">Get Started</a>
+                <Button asChild className="w-full bg-gradient-gold  shadow-xl hover:shadow-yellow-500/25  text-lg py-6 font-semibold mt-auto">
+                  <a href="#contact">Contact Sales</a>
                 </Button>
               </CardContent>
             </Card>
@@ -560,68 +587,86 @@ export default function IndividualContractPage() {
         </div>
       </div>
 
+
       {/* FAQ Section */}
-      <div id="faq" className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <div id="faq" className="py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-emerald/5 rounded-full -translate-y-48 -translate-x-48"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gold/5 rounded-full translate-y-40 translate-x-40"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 ">
             <h2 className="text-4xl md:text-5xl font-bold text-slate mb-4 font-[family-name:var(--font-merriweather)]">Frequently Asked Questions</h2>
-            <p className="text-slate-600">Everything you need to know before getting your contract reviewed.</p>
+            <p className="text-muted-foreground">Straight answers to the most common questions.</p>
           </div>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger>What types of contracts do you review?</AccordionTrigger>
+              <AccordionTrigger>Do you use AI for reviews?</AccordionTrigger>
               <AccordionContent>
-                We review all types of individual contracts: employment agreements, rental leases, loan documents, service contracts, partnership deals, and more. If you're not sure, just ask us.
+                We may use AI for optional pre-scanning to highlight areas of interest, but every review is performed by experienced human lawyers.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>How long does the review take?</AccordionTrigger>
+              <AccordionTrigger>Will you walk me through what each clause means?</AccordionTrigger>
               <AccordionContent>
-                Most individual contracts are reviewed within 24 hours. Complex contracts with multiple pages may take up to 48 hours. We'll let you know the expected timeline when you submit.
+                Yes. We provide a plain-English explanation of important clauses, why they exist, and how they affect your rights and obligations.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger>Will the other party know I got this reviewed?</AccordionTrigger>
+              <AccordionTrigger>Can you suggest what to push back on or let go?</AccordionTrigger>
               <AccordionContent>
-                No. This is completely confidential between you and us. We don't contact the other party, and your review is private. We sign an NDA to protect your information.
+                Absolutely. We highlight negotiable points, recommend what’s worth pushing on, and where it’s safe to accept as-is to keep deals moving.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger>What if I find problems in my contract?</AccordionTrigger>
+              <AccordionTrigger>Do you help with redlines and edits?</AccordionTrigger>
               <AccordionContent>
-                We'll explain what each problematic clause means and suggest questions you can ask or changes you can request. You can negotiate before signing, or decide not to sign at all.
+                Yes. We can return annotated comments, redlines, or a summary with suggested language you can paste directly.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5">
-              <AccordionTrigger>Can you help me negotiate changes?</AccordionTrigger>
+              <AccordionTrigger>What is the typical turnaround time?</AccordionTrigger>
               <AccordionContent>
-                We provide you with questions to ask and points to negotiate, but we don't negotiate directly with the other party. You maintain control of the process and decide what to do.
+                Standard turnaround is 24–48 hours for most contracts, with urgent options available when needed.
               </AccordionContent>
             </AccordionItem>
-           
+            <AccordionItem value="item-6">
+              <AccordionTrigger>How do you handle confidentiality?</AccordionTrigger>
+              <AccordionContent>
+                NDA-first workflow, secure storage, and least-privilege access. Your documents stay private.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </div>
 
       {/* Closing CTA Section */}
-      <div className="py-24 bg-gradient-to-br from-emerald-50/30 to-white">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance text-slate">
-            Contracts you understand.
-          </h2>
-          <p className="text-xl mb-8 text-slate-600 max-w-2xl mx-auto text-balance">
-            Contracts vetted by humans you can speak to.
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="text-xl px-10 py-6 bg-emerald text-white hover:bg-emerald/90 shadow-xl hover:shadow-emerald-500/20 transition-colors font-semibold"
-          >
+      <div className="py-24 bg-gradient-to-br from-emerald-50/30 to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald/5 rounded-full -translate-y-48 translate-x-48"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full translate-y-40 -translate-x-40"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald via-gold to-deep-blue"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <div className="">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-balance text-slate">
+              Contracts you understand.
+            </h2>
+            <p className="text-xl mb-8 text-slate-600 max-w-2xl mx-auto text-balance">
+              Contracts vetted by humans you can speak to.
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="text-xl px-10 py-6 bg-emerald text-white hover:bg-emerald/90 shadow-xl hover:shadow-emerald/20   font-semibold"
+            >
               <a href="#contact">
                 Start your review
                 <ArrowRight className="ml-2 h-6 w-6" />
               </a>
-          </Button>
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -646,7 +691,7 @@ export default function IndividualContractPage() {
                 const name = String(formData.get('name') || '')
                 const email = String(formData.get('email') || '')
                 const message = String(formData.get('message') || '')
-                const subject = encodeURIComponent(`Individual Contract Review Request from ${name}`)
+                const subject = encodeURIComponent(`Contract Review Inquiry from ${name}`)
                 const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nContract Details:\n${message}`)
                 window.location.href = `mailto:hello@legaleyes.com?subject=${subject}&body=${body}`
               }}
@@ -683,7 +728,7 @@ export default function IndividualContractPage() {
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                  Tell us about your personal contract
+                  Tell us about your business contract
                 </label>
                 <textarea
                   id="message"
@@ -691,7 +736,7 @@ export default function IndividualContractPage() {
                   required
                   rows={6}
                   className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald focus:ring-2 focus:ring-emerald/20 focus:outline-none transition-colors resize-none"
-                  placeholder="Please describe your contract type (employment offer, rental lease, service agreement, loan document, etc.), any specific concerns you have, and your preferred timeline for the review."
+                  placeholder="Please describe your contract type (vendor agreement, SaaS contract, employment, partnership, etc.), company size, any specific concerns, and your preferred timeline for the review."
                 />
               </div>
               
@@ -716,6 +761,7 @@ export default function IndividualContractPage() {
         </div>
       </div>
 
+      {/* Footer */}
       <Footer />
     </div>
   )
