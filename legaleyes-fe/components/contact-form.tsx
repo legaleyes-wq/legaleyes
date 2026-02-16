@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react"
+import { Mail, Send, CheckCircle, AlertCircle, Loader2, MessageCircle } from "lucide-react"
 import { ContactFormData, sendEmailViaBrevoApi, validateContactForm } from "@/lib/email-service"
 
 interface ContactFormProps {
@@ -12,8 +12,8 @@ interface ContactFormProps {
   description?: string
 }
 
-export function ContactForm({ 
-  serviceType, 
+export function ContactForm({
+  serviceType,
   title = "Ready to get started?",
   description = "Send us your contract details and we'll get back to you quickly with a detailed review."
 }: ContactFormProps) {
@@ -25,17 +25,17 @@ export function ContactForm({
     message: '',
     serviceType
   })
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{
     type: 'success' | 'error' | null
-    message: string
+    message: React.ReactNode
   }>({ type: null, message: '' })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
-    
+
     // Clear status when user starts typing
     if (submitStatus.type) {
       setSubmitStatus({ type: null, message: '' })
@@ -44,7 +44,7 @@ export function ContactForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // Validate form
     const validation = validateContactForm(formData)
     if (!validation.isValid) {
@@ -61,13 +61,13 @@ export function ContactForm({
     try {
       // Try server-side Brevo route first
       const apiResult = await sendEmailViaBrevoApi(formData)
-      
+
       if (apiResult.success) {
         setSubmitStatus({
           type: 'success',
           message: apiResult.message
         })
-        
+
         // Reset form
         setFormData({
           name: '',
@@ -80,13 +80,21 @@ export function ContactForm({
       } else {
         setSubmitStatus({
           type: 'error',
-          message: 'Unable to send right now. Please try again in a minute.'
+          message: (
+            <span>
+              Unable to send automatically. Please <a href="mailto:contact@legaleyes.co" className="underline font-semibold">email us directly</a> at contact@legaleyes.co
+            </span>
+          )
         })
       }
     } catch (error) {
       setSubmitStatus({
         type: 'error',
-        message: 'Unable to send right now. Please try again in a minute.'
+        message: (
+          <span>
+            Unable to send automatically. Please <a href="mailto:contact@legaleyes.co" className="underline font-semibold">email us directly</a> at contact@legaleyes.co
+          </span>
+        )
       })
     } finally {
       setIsSubmitting(false)
@@ -104,7 +112,7 @@ export function ContactForm({
             {description}
           </p>
         </div>
-        
+
         <Card className="shadow-xl border border-slate-200">
           <CardContent className="p-8 md:p-12">
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -124,7 +132,7 @@ export function ContactForm({
                     placeholder="Your full name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
                     Email Address *
@@ -157,7 +165,7 @@ export function ContactForm({
                     placeholder="+91 98765 43210"
                   />
                 </div>
-                
+
                 {serviceType === 'business' && (
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
@@ -197,30 +205,36 @@ export function ContactForm({
 
               {/* Status Messages */}
               {submitStatus.type && (
-                <div className={`p-4 rounded-lg flex items-center gap-3 ${
-                  submitStatus.type === 'success' 
-                    ? 'bg-emerald-50 border border-emerald-200 text-emerald-800' 
-                    : 'bg-red-50 border border-red-200 text-red-800'
-                }`}>
+                <div className={`p-4 rounded-lg flex items-center gap-3 ${submitStatus.type === 'success'
+                  ? 'bg-emerald-50 border border-emerald-200 text-emerald-800'
+                  : 'bg-red-50 border border-red-200 text-red-800'
+                  }`}>
                   {submitStatus.type === 'success' ? (
                     <CheckCircle className="h-5 w-5 flex-shrink-0" />
                   ) : (
                     <AlertCircle className="h-5 w-5 flex-shrink-0" />
                   )}
-                  <span className="text-sm">{submitStatus.message}</span>
+                  <div className="text-sm">{submitStatus.message}</div>
                 </div>
               )}
 
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-between pt-4">
-                <div className="flex items-center gap-2 text-sm text-slate-600">
-                  <Mail className="h-4 w-4" />
-                  <span>We'll respond within 24 hours</span>
-                </div>
-                
-                <Button 
-                  type="submit" 
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="border-2 border-emerald text-emerald hover:bg-emerald/10 w-full sm:w-auto"
+                  asChild
+                >
+                  <a href="https://wa.me/917039123025" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    Chat on WhatsApp
+                  </a>
+                </Button>
+
+                <Button
+                  type="submit"
                   disabled={isSubmitting}
-                  className="bg-emerald hover:bg-emerald/90 text-white font-semibold px-8 py-3 min-w-[160px]"
+                  className="bg-emerald hover:bg-emerald/90 text-white font-semibold px-8 py-3 w-full sm:w-auto min-w-[160px]"
                 >
                   {isSubmitting ? (
                     <>
