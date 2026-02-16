@@ -10,7 +10,7 @@ export function Footer() {
           <nav className="flex items-center gap-6 text-sm">
             <a href="/legal" className="text-muted-foreground hover:text-emerald transition-colors">Legal</a>
           </nav>
-          <div className="text-sm text-muted-foreground">© 2025 LegalEyes</div>
+          <div className="text-sm text-muted-foreground">© 2026 LegalEyes</div>
         </div>
       </div>
     </footer>

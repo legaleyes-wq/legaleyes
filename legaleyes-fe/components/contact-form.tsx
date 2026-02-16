@@ -25,6 +25,7 @@ export function ContactForm({
     message: '',
     serviceType
   })
+  const [showEmailForm, setShowEmailForm] = useState(false)
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{
@@ -108,150 +109,172 @@ export function ContactForm({
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-[family-name:var(--font-merriweather)] text-slate">
             {title}
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
             {description}
           </p>
+
+          {/* Primary Choice Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <Button
+              size="lg"
+              className="bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold px-8 py-6 text-lg w-full sm:w-auto shadow-lg hover:shadow-xl transition-all"
+              asChild
+            >
+              <a href="https://wa.me/917039123025" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-6 w-6 mr-2" />
+                Chat on WhatsApp
+              </a>
+            </Button>
+
+            <Button
+              size="lg"
+              variant={showEmailForm ? "secondary" : "outline"}
+              className={`font-semibold px-8 py-6 text-lg w-full sm:w-auto transition-all ${showEmailForm
+                  ? "bg-slate-100 text-slate-800"
+                  : "bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50"
+                }`}
+              onClick={() => setShowEmailForm(true)}
+            >
+              <Mail className="h-6 w-6 mr-2" />
+              Send an Email
+            </Button>
+          </div>
         </div>
 
-        <Card className="shadow-xl border border-slate-200">
-          <CardContent className="p-8 md:p-12">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
-                    placeholder="Your full name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
-                    placeholder="+91 98765 43210"
-                  />
-                </div>
-
-                {serviceType === 'business' && (
+        {showEmailForm && (
+          <Card className="shadow-xl border border-slate-200 animate-fade-in-up">
+            <CardContent className="p-8 md:p-12">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
-                      Company Name
+                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                      Full Name *
                     </label>
                     <input
                       type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
+                      id="name"
+                      name="name"
+                      value={formData.name}
                       onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
-                      placeholder="Your company name"
+                      placeholder="Your full name"
                     />
                   </div>
-                )}
-              </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                  Contract Details *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-none"
-                  placeholder="Please describe your contract, key terms you're concerned about, timeline, and any specific questions you have..."
-                />
-                <p className="text-sm text-slate-500 mt-2">
-                  The more details you provide, the better we can help you.
-                </p>
-              </div>
-
-              {/* Status Messages */}
-              {submitStatus.type && (
-                <div className={`p-4 rounded-lg flex items-center gap-3 ${submitStatus.type === 'success'
-                  ? 'bg-emerald-50 border border-emerald-200 text-emerald-800'
-                  : 'bg-red-50 border border-red-200 text-red-800'
-                  }`}>
-                  {submitStatus.type === 'success' ? (
-                    <CheckCircle className="h-5 w-5 flex-shrink-0" />
-                  ) : (
-                    <AlertCircle className="h-5 w-5 flex-shrink-0" />
-                  )}
-                  <div className="text-sm">{submitStatus.message}</div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
                 </div>
-              )}
 
-              <div className="flex flex-col sm:flex-row gap-4 items-center justify-between pt-4">
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="border-2 border-emerald text-emerald hover:bg-emerald/10 w-full sm:w-auto"
-                  asChild
-                >
-                  <a href="https://wa.me/917039123025" target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="h-4 w-4 mr-2" />
-                    Chat on WhatsApp
-                  </a>
-                </Button>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                      placeholder="+91 98765 43210"
+                    />
+                  </div>
 
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-emerald hover:bg-emerald/90 text-white font-semibold px-8 py-3 w-full sm:w-auto min-w-[160px]"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-4 w-4 mr-2" />
-                      Send Message
-                    </>
+                  {serviceType === 'business' && (
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
+                        Company Name
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                        placeholder="Your company name"
+                      />
+                    </div>
                   )}
-                </Button>
-              </div>
-            </form>
-          </CardContent>
-        </Card>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                    Contract Details *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-none"
+                    placeholder="Please describe your contract, key terms you're concerned about, timeline, and any specific questions you have..."
+                  />
+                  <p className="text-sm text-slate-500 mt-2">
+                    The more details you provide, the better we can help you.
+                  </p>
+                </div>
+
+                {/* Status Messages */}
+                {submitStatus.type && (
+                  <div className={`p-4 rounded-lg flex items-center gap-3 ${submitStatus.type === 'success'
+                    ? 'bg-emerald-50 border border-emerald-200 text-emerald-800'
+                    : 'bg-red-50 border border-red-200 text-red-800'
+                    }`}>
+                    {submitStatus.type === 'success' ? (
+                      <CheckCircle className="h-5 w-5 flex-shrink-0" />
+                    ) : (
+                      <AlertCircle className="h-5 w-5 flex-shrink-0" />
+                    )}
+                    <div className="text-sm">{submitStatus.message}</div>
+                  </div>
+                )}
+
+                <div className="flex flex-col sm:flex-row gap-4 items-center justify-between pt-4">
+                  <div className="flex items-center gap-2 text-sm text-slate-600">
+                    <Mail className="h-4 w-4" />
+                    <span>We'll respond within 24 hours</span>
+                  </div>
+
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-emerald hover:bg-emerald/90 text-white font-semibold px-8 py-3 w-full sm:w-auto min-w-[160px]"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4 mr-2" />
+                        Send Email
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </form>
+            </CardContent>
+          </Card>
+        )}
       </div>
     </div>
   )
