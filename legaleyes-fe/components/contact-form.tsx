@@ -83,7 +83,7 @@ export function ContactForm({
           type: 'error',
           message: (
             <span>
-              Unable to send automatically. Please <a href="mailto:contact@legaleyes.co" className="underline font-semibold">email us directly</a> at contact@legaleyes.co
+              Email failed, Please <a href="mailto:contact@legaleyes.co" className="underline font-semibold">email us directly</a> at contact@legaleyes.co or <a href="https://wa.me/917039123025" target="_blank" rel="noopener noreferrer" className="underline font-semibold">Say Hi on Whatsapp</a>
             </span>
           )
         })
@@ -93,7 +93,7 @@ export function ContactForm({
         type: 'error',
         message: (
           <span>
-            Unable to send automatically. Please <a href="mailto:contact@legaleyes.co" className="underline font-semibold">email us directly</a> at contact@legaleyes.co
+            Email failed, Please <a href="mailto:contact@legaleyes.co" className="underline font-semibold">email us directly</a> at contact@legaleyes.co or <a href="https://wa.me/917039123025" target="_blank" rel="noopener noreferrer" className="underline font-semibold">Say Hi on Whatsapp</a>
           </span>
         )
       })
@@ -130,8 +130,8 @@ export function ContactForm({
               size="lg"
               variant={showEmailForm ? "secondary" : "outline"}
               className={`font-semibold px-8 py-6 text-lg w-full sm:w-auto transition-all ${showEmailForm
-                  ? "bg-slate-100 text-slate-800"
-                  : "bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50"
+                ? "bg-slate-100 text-slate-800"
+                : "bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50"
                 }`}
               onClick={() => setShowEmailForm(true)}
             >
